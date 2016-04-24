@@ -1,0 +1,55 @@
+body{
+  background: black;
+}
+
+header{
+  width:95%;
+  height:200px;
+  margin: auto;
+  background-image:url(../image/mibanner.jpg);
+}
+
+#navmenu{
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+#navmenu li{
+  margin: 2px;
+  border: 1px solid red;
+  float:left;
+}
+
+#navmenu li a{
+  display: block;   /*convertimos los vinculos en un bloque*/
+  width: 150px;
+  padding:4px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 13px;
+  color: yellow;
+  background-color: black;
+  border-left:10px solid #666666;
+}
+
+#navmenu li a:hover{
+  color:red;
+  background-color: gray;
+  border-left-color:yellow;
+}
+
+section{
+  width: 95%;
+  height: 500px;
+  margin: auto;
+  background-color: red;
+  opacity:0.2;
+}
+
+footer{
+  width: 95%;
+  height: 100px;
+  margin: auto;
+  background-color: gray;
+}
