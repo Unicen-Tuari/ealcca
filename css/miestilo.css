@@ -1,47 +1,52 @@
 body{
-  background: black;
+  background-image: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
 }
 
 header{
   width:95%;
-  height:200px;
+  height: 270px;
   margin: auto;
   background-image:url(../image/mibanner.jpg);
+  background-size:100% 100%;
+}
+
+nav{
+    width:56%;
+    height:25px;
+    background-color: black;
+    opacity: 0.7;
 }
 
 #navmenu{
   list-style:none;
   margin: 0;
-  padding: 0;
+  padding: 4px;
 }
 
 #navmenu li{
-  margin: 2px;
-  border: 1px solid red;
   float:left;
 }
 
 #navmenu li a{
   display: block;   /*convertimos los vinculos en un bloque*/
-  width: 150px;
-  padding:4px;
+  width: 140px;
   text-decoration: none;
   text-align: center;
-  font-size: 13px;
-  color: yellow;
-  background-color: black;
-  border-left:10px solid red;
+  font-size: 14px;
+  color: #FFAA00;
 }
 
 #navmenu li a:hover{
-  color:red;
-  background-color: gray;
-  border-left-color:yellow;
+  color:black;
+  background-color:#FFAA00;
 }
 
 section{
   width: 95%;
-  height: 500px;
+  height: 800px;
   margin: auto;
   background-color: red;
   opacity:0.2;
@@ -52,4 +57,5 @@ footer{
   height: 100px;
   margin: auto;
   background-color: gray;
+  opacity: 0.2;
 }
