@@ -30,7 +30,7 @@ header{
   font-size: 13px;
   color: yellow;
   background-color: black;
-  border-left:10px solid #666666;
+  border-left:10px solid red;
 }
 
 #navmenu li a:hover{
