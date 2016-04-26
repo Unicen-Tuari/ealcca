@@ -144,9 +144,45 @@ span{
 }
 
 footer{
-  width: 95%;
-  height: 100px;
-  margin: auto;
-  background-color: gray;
-  opacity: 0.2;
+  width: 94%;
+  height: 150px;
+  margin-left: 2.4%;
+  background-color: rgba(211, 174, 0, 0.2);
+  position:absolute;
+}
+
+.contacto_desarrollador{
+  width: 30%;
+  margin-left: 1%;
+  color: #929E9C;
+  position: absolute;
+}
+
+.desarrollado{
+  width: 40%;
+  margin-left: 80%;
+  position: ;
+}
+
+.desarrollado ul{
+  list-style: none;
+}
+
+.desarrollado ul li{
+  float: left;
+  margin: 3px;
+}
+
+.desarrollado ul li a{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: black;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.desarrollado ul li a:hover{
+  background: white;
+  color: black;
 }
