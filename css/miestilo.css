@@ -1,3 +1,7 @@
+*{
+  font-family: serif;
+}
+
 body{
   background-image: url(../image/background.jpg);
   background-repeat: no-repeat;
@@ -14,9 +18,9 @@ header{
 }
 
 nav{
-    width:56%;
-    height:25px;
-    background-color: black;
+  width:56%;
+  height:25px;
+  background-color: black;
 }
 
 #navmenu{
@@ -45,16 +49,65 @@ nav{
 
 section{
   width: 95%;
-  height: 800px;
+  height: 1100px;
   margin: auto;
   background-color: rgba(255, 0, 0, 0.2);
-  -background-color: red;
+  position: relative;
 }
 
-.encabezado{
-  width: 100%;
-  background-color: #FFAA00;
+span{
+  color:#961100;
+}
 
+.estilo_encabezado{
+  background-color: #D1A00D;
+  border: 2px solid #D1A00D;
+  position: absolute;
+}
+
+.encabezado_novedades .estilo_encabezado{
+  width: 85%;
+  margin-top: 1%;
+  margin-left: 7.5%;
+}
+
+.contenido_novedades{
+  width: 85%;
+  border: 2px solid #D1A00D;
+  margin-left: 7.5%;
+  margin-top: 4%;
+  position: absolute;
+}
+
+.foto_novedad{
+  width: 18%;
+  height: 280px;
+  margin: 8px;
+}
+
+.foto_novedad:hover{
+  opacity: 0.6;
+}
+
+.encabezado_recitales .estilo_encabezado{
+  width: 35%;
+  margin-top: 29%;
+  margin-left: 57.5%;
+}
+
+.contenido_recitales{
+  width: 35%;
+  border: 2px solid #D1A00D;
+  margin-left: 57.5%;
+  margin-top: 32%;
+  position: absolute;
+}
+
+.foto_recital{
+  width: 95%;
+  height: 150px;
+  margin: 5px;
+  margin-left:2.5%;
 }
 
 footer{
