@@ -59,6 +59,36 @@ span{
   color:#961100;
 }
 
+.social{
+  position: fixed;
+  left: 0;
+  top: 45%;
+  z-index: 2000;
+}
+
+  .social ul{
+    list-style: none;
+  }
+
+  .social ul li a {
+    display: inline-block;
+    color: #fff;
+    background: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+  }
+
+  .social ul li .icon-facebook {background: #3b5998;}
+  .social ul li .icon-twitter {background: #00abf0;}
+  .social ul li .icon-google {background: #d95232;}
+  .social ul li .icon-pinterest3 {background: #ae181f;}
+  .social ul li .icon-mail {background: #666666;}
+
+  .social ul li a:hover{
+    background: #000;
+    padding: 10px 30px;
+  }
+
 .estilo_encabezado{
   background-color: #D1A00D;
   border: 2px solid #D1A00D;
