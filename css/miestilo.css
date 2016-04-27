@@ -192,6 +192,14 @@ span{
   height: 3740px;
 }
 
+.section_noticia{
+  height: 550px;
+}
+
+.section_contacto{
+  height: 500px;
+}
+
 .encabezado_lista_prod .estilo_encabezado{
   width: 30%;
   margin-top: 1%;
@@ -292,6 +300,30 @@ hr{
   margin-left: 60%;
   text-decoration: none;
   color:white;
+}
+
+.contenido_noticias .caja_contenido {
+  width: 85%;
+  margin-left: 7.5%;
+  margin-top: 4%;
+}
+
+.foto_noticia{
+  width: 30%;
+  height: 250px;
+  margin: 3%;
+}
+
+.titulo_noticia{
+  color: white;
+  float: right;
+  margin-right: 310px;
+  margin-top: 3%;
+}
+
+.resena_noticia{
+  color: white;
+  float: right;
 }
 
 footer{
