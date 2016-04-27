@@ -23,29 +23,29 @@ nav{
   background-color: black;
 }
 
-#navmenu{
-  list-style:none;
-  margin: 0;
-  padding: 4px;
-}
+  #navmenu{
+    list-style:none;
+    margin: 0;
+    padding: 4px;
+  }
 
-#navmenu li{
-  float:left;
-}
+  #navmenu li{
+    float:left;
+  }
 
-#navmenu li a{
-  display: block;   /*convertimos los vinculos en un bloque*/
-  width: 140px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 14px;
-  color: #FFAA00;
-}
+  #navmenu li a{
+    display: block;   /*convertimos los vinculos en un bloque*/
+    width: 140px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    color: #FFAA00;
+  }
 
-#navmenu li a:hover{
-  color:black;
-  background-color:#FFAA00;
-}
+  #navmenu li a:hover{
+    color:black;
+    background-color:#FFAA00;
+  }
 
 section{
   width: 95%;
@@ -104,9 +104,6 @@ span{
   margin-left: 7.5%;
 }
 
-/*.estilo_contenido{
-  border: 2px solid #D1A00D;
-}*/
 .caja_contenido{
   border: 2px solid #D1A00D;
   position: absolute;
@@ -172,20 +169,23 @@ span{
 
 }
 
-.micajita{
-  border: 5px solid white;
+.contenido_somos .caja_contenido{
+  width: 85%;
+  margin-left: 7.5%;
+  margin-top: 4%;
+  background: rgba(0, 0, 20, 0.5);
 }
 
-.cajauno .micajita{
-    width: 20%;
+.quienes,.somos{
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.8;
+  padding: 20px;
+  color: white;
 }
-.cajados .micajita{
-    width: 50%;
-    background: red;
-    margin-left: 200px;
-}
-.cajatres .micajita{
-  width: 60%;
+
+.section_somos{
+  height: 650px;
 }
 
 footer{
