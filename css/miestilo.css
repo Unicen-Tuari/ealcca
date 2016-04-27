@@ -104,12 +104,19 @@ span{
   margin-left: 7.5%;
 }
 
-.contenido_novedades{
-  width: 85%;
+/*.estilo_contenido{
   border: 2px solid #D1A00D;
+}*/
+.caja_contenido{
+  border: 2px solid #D1A00D;
+  position: absolute;
+
+}
+
+.contenido_novedades .caja_contenido{
+  width: 85%;
   margin-left: 7.5%;
   margin-top: 4%;
-  position: absolute;
 }
 
 .foto_novedad{
@@ -128,12 +135,10 @@ span{
   margin-left: 57.5%;
 }
 
-.contenido_recitales{
+.contenido_recitales .caja_contenido{
   width: 35%;
-  border: 2px solid #D1A00D;
   margin-left: 57.5%;
   margin-top: 32%;
-  position: absolute;
 }
 
 .foto_recital{
@@ -141,6 +146,46 @@ span{
   height: 150px;
   margin: 5px;
   margin-left:2.5%;
+}
+
+.contenido_extras .caja_contenido{
+  width: 48%;
+  height: 500px;
+  margin-left: 7.5%;
+  margin-top: 29%;
+}
+
+.contenido_extras .caja_contenido ul{
+  list-style-image: url(../image/vineta.png);
+}
+
+.contenido_extras  .caja_contenido ul li{
+  font-size: 25px;
+  color: white;
+  margin-left: 112px;
+}
+
+#lista_remeras{
+  font-size: 25px;
+  color:#D1A00D;
+  margin-left: 20%;
+
+}
+
+.micajita{
+  border: 5px solid white;
+}
+
+.cajauno .micajita{
+    width: 20%;
+}
+.cajados .micajita{
+    width: 50%;
+    background: red;
+    margin-left: 200px;
+}
+.cajatres .micajita{
+  width: 60%;
 }
 
 footer{
