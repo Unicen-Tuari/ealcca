@@ -189,7 +189,7 @@ span{
 }
 
 .section_catalogo{
-  height: 3550px;
+  height: 3740px;
 }
 
 .encabezado_lista_prod .estilo_encabezado{
@@ -286,6 +286,12 @@ hr{
   width: 400px;
   margin: 4%;
   margin-left: 20%;
+}
+
+.arriba{
+  margin-left: 60%;
+  text-decoration: none;
+  color:white;
 }
 
 footer{
