@@ -106,6 +106,7 @@ span{
 
 .caja_contenido{
   border: 2px solid #D1A00D;
+  background: rgba(0, 0, 20, 0.5);
   position: absolute;
 
 }
@@ -173,7 +174,6 @@ span{
   width: 85%;
   margin-left: 7.5%;
   margin-top: 4%;
-  background: rgba(0, 0, 20, 0.5);
 }
 
 .quienes,.somos{
@@ -186,6 +186,106 @@ span{
 
 .section_somos{
   height: 650px;
+}
+
+.section_catalogo{
+  height: 3550px;
+}
+
+.encabezado_lista_prod .estilo_encabezado{
+  width: 30%;
+  margin-top: 1%;
+  margin-left: 7.5%;
+}
+
+.contenido_lista_prod .caja_contenido{
+  width: 30%;
+  margin-top: 4%;
+  margin-left: 7.5%;
+}
+
+.contenido_lista_prod .caja_contenido ul{
+  list-style-image: url(../image/estrella.png);
+}
+
+.contenido_lista_prod  .caja_contenido ul li{
+  font-size: 20px;
+  margin-left:10;
+}
+
+.contenido_lista_prod .caja_contenido ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+.encabezado_galeria .estilo_encabezado{
+  width: 52.5%;
+  margin-top: 1%;
+  margin-left: 40%;
+}
+
+.contenido_galeria .caja_contenido{
+  width: 52.5%;
+  margin-top: 4%;
+  margin-left: 40%;
+}
+
+.foto_galeria{
+  width: 20%;
+  height: 200px;
+  margin: 2%;
+}
+
+hr{
+  width: 70%;
+  color: #D1A00D; --modz
+  background-color: #D1A00D --chrome
+}
+
+.tabla_producto{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tabla_producto td{
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 4px 7px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.tabla_producto th{
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 4px 7px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.tabla_producto .titulo_tabla{
+  font-size: 20px;
+  font-family: "Times New Roman",times,serif !important;;
+  color:white;
+  vertical-align: top;
+}
+
+.tabla_producto .celda{
+  font-size: 16px;
+  font-family: "Times New Roman" ,times,serif !important;;
+  color:white;
+  vertical-align: top;
+}
+
+.tabla_beriso .tabla_producto{
+  width: 400px;
+  margin: 4%;
+  margin-left: 20%;
 }
 
 footer{
