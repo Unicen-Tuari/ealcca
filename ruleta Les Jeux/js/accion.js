@@ -5,7 +5,7 @@ var numeroelegido = -1;
 
 function sorteo()
 {
-  return Math.floor(Math.random() * 9);
+  return Math.floor(Math.random() * 10);
 }
 
 function jugar()
@@ -23,29 +23,28 @@ function jugar()
     }
     if (numeroelegido == -1)  // para el caso en que no hayamos marcado algun radio
     {
-      console.log("Elija un numero para apostar");
+      alert("Elija un numero para apostar");
       return;
     }
     if (numeroelegido == numeroganador)  //revisamos el resultado con el numero de apuesta
     {
-      if (numeroelegido==0){      //condiciones sobre el resultado
+      if (numeroelegido == 0){      //condiciones sobre el resultado
         saldo += 10;
-        console.log("grandioso, ganaste +10");
+        alert("grandioso, ganaste +10");
+        return
       }
       if (numeroelegido >= 1 && numeroelegido <6){
-        saldo += 4;
-        console.log("bien!! ganaste +4");
+        saldo += 5;
+        alert("bien!! ganaste +4");
       }
       else{
-        saldo += 2;
-        console.log("ganaste")
+        saldo += 3;
+        alert("ganaste, +3");
       }
     }
-    else {                        
+    else {
       saldo = saldo - 1;
-      console.log('PERDISTE, vuelve a intentar');
+      alert('PERDISTE, vuelve a intentar');
     }
     document.getElementById("udcuenta").innerHTML = "UD. cuenta con = " + saldo; // muestra saldo actualizado en el html
 }
-
-
