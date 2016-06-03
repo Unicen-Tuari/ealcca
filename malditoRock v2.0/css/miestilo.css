@@ -1,5 +1,11 @@
 .navbar-brand{
   font-family:Brown Fox;
-  color: red  ;
+}
+
+body{
+  background: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;  
+  background-attachment: fixed;
 
 }
