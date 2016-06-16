@@ -1,19 +1,19 @@
-.navbar-brand{
-  font-family:Brown Fox;
-}
-
-.nove{
-  color: black;
-  background-color: #A67300;
-  padding: 5px;
-}
-
 body{
   background: url(../image/background.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
   padding-top: 60px;
+}
+
+.navbar-brand{
+  font-family:Brown Fox;
+}
+
+.subtitulo{
+  color: black;
+  background-color: #A67300;
+  padding: 5px;
 }
 
 p{
@@ -36,4 +36,32 @@ p{
 .contenido{
   /*border: 2px solid #A67300;*/
   background-color: rgba(166, 125, 0, 0.5);
+}
+
+.footer{
+  background-color: #A67300;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.footer .contacto{
+  background-color: red;
+  margin-top: 12px;
+  margin-left: 20px;
+  float: left;
+}
+
+.footer .cc{
+  line-height: 0.5;
+  background-color: yellow;
+  float: right;
+  margin-top: 35px;
+  margin-right: 15px;
+}
+
+.footer .cc .img-cc{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
 }
