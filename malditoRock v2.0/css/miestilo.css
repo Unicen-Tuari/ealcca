@@ -2,10 +2,38 @@
   font-family:Brown Fox;
 }
 
+.nove{
+  color: black;
+  background-color: #A67300;
+  padding: 5px;
+}
+
 body{
   background: url(../image/background.jpg);
   background-repeat: no-repeat;
-  background-position: center top;  
+  background-position: center top;
   background-attachment: fixed;
+  padding-top: 60px;
+}
 
+p{
+    color:white;
+}
+
+.jumbotron{
+  background-image: url("../image/demo.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: yellow 0.3em 0.3em 0.3em;
+
+}
+
+.tales{
+  width: 50%;
+}
+
+.contenido{
+  /*border: 2px solid #A67300;*/
+  background-color: rgba(166, 125, 0, 0.5);
 }
