@@ -13,11 +13,16 @@ body{
 .subtitulo{
   color: black;
   background-color: #A67300;
+  font-family: 'Dosis', sans-serif;
   padding: 5px;
 }
 
 p{
     color:white;
+}
+
+.maldito{
+  font-weight: 800;
 }
 
 .jumbotron{
@@ -33,10 +38,26 @@ p{
   width: 50%;
 }
 
-.contenido{
+.recuadro-texto{
   /*border: 2px solid #A67300;*/
   background-color: rgba(166, 125, 0, 0.5);
+  text-align: justify;
+  font-family: 'Open Sans', sans-serif;
+  font-size: medium;
+  line-height: 1.5;
+  padding: 20px;
 }
+
+p.primera-linea{
+  text-indent: 35px;
+}
+
+.form-novedades{
+  width: 200px;
+}
+
+
+
 
 .footer{
   background-color: #A67300;
