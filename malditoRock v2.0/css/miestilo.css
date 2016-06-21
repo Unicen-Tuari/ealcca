@@ -56,15 +56,11 @@ p.primera-linea{
   width: 200px;
 }
 
-.break:before{
-  display: block;
-  content: " ";
-}
-
 .footer{
   background-color: #A67300;
   height: 150px;
   margin-bottom: 20px;
+  margin-top:20px;
 }
 
 .footer .contacto{
