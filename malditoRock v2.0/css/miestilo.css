@@ -56,6 +56,10 @@ p.primera-linea{
   width: 200px;
 }
 
+figcaption{
+  text-align: center;
+}
+
 .footer{
   background-color: #A67300;
   height: 150px;
