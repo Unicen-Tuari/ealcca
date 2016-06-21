@@ -56,7 +56,10 @@ p.primera-linea{
   width: 200px;
 }
 
-
+.break:before{
+  display: block;
+  content: " ";
+}
 
 .footer{
   background-color: #A67300;
