@@ -56,35 +56,72 @@ p.primera-linea{
   width: 200px;
 }
 
+/*--------------------------------------article de noticia*/
+.noticia{
+  background-color: white;
+  overflow: auto;
+  padding: 10px;
+  margin: 10px 0;
+}
+.noticia .fotonoticia{
+  width: 30%;
+  float: left;
+}
+.noticia .contexto-noticia{
+  width: 70%;
+  float: right;
+  padding: 0 15px;
+  text-align: justify;
+}
+.noticia .titulo-noticia{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
+.noticia .subtitulo-noticia{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 19px;
+  color: black;
+}
+/*-----------------------------------fin article de noticia*/
+
 figcaption{
   text-align: center;
 }
 
+.publicidad{
+  padding: 5px;
+}
+
+.contexto-publicidad,.img-publicidad{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contexto-publicidad{
+  width: 180px;
+  text-align: justify;
+}
+/*------------------------------footer*/
 .footer{
   background-color: #A67300;
-  height: 150px;
-  margin-bottom: 20px;
-  margin-top:20px;
+  overflow: auto;
+  margin: 10px 0;
+  padding: 20px;
 }
-
-.footer .contacto{
-  background-color: red;
-  margin-top: 12px;
-  margin-left: 20px;
+.footer .contacto-footer{
+  width: 150px;
   float: left;
 }
-
-.footer .cc{
+.footer .cc-footer{
   line-height: 0.5;
-  background-color: yellow;
   float: right;
-  margin-top: 35px;
-  margin-right: 15px;
 }
-
-.footer .cc .img-cc{
+.footer .cc-footer .img-cc{
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 8px;
 }
+/*------------------------------footer*/
