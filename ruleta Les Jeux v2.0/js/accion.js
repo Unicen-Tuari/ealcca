@@ -1,18 +1,16 @@
 "use strict";
 
-function elegirapuesta(){
-  var x = document.getElementById("clase-apuesta").value;
-  if (x == "pleno"){
-    var x = document.getElementById("valor-apuesta");
-    var option = document.createElement("option");
-    option.text = "1";
-    x.add(option);
-    alert("bien");
-  }
-
-  alert(x);
-
+function Cuadro(){
+  this.valor = parseInt();
+  this.ccolor = string("");
 }
 
+function Ruleta(){
+  Ruleta.prototype.tirar = function(){
+    return Math.floor((Math.random()*11))
+  }
+}
 
-
+function Credito(){
+  var saldo = 100;
+}

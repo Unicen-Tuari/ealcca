@@ -2,43 +2,80 @@
 <html>
 <head>
   <title> Juego de ruleta</title>
+  <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/estilo.css">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+  <div id="lista" class="listar"></div>
    <div class="ruleta">
     <h1>Bienvenido a "LES JEUX"</h1>
-    <h2 id="udcuenta">Su saldo es = 100</h2>
+    <h2 id="udcuenta">Su saldo es = <span id="saldo"></span></h2>
+    <h2>Salio:<span id="salio"></span></h2>
     <p class="lead">Ingrese su apuesta</p>
-    <form  class="" action="" method="post">
-        <div class="form-group">
-            <label for="apuesta">Tipo de apuesta:</label>  
-            <select class="form-control" id="clase-apuesta" onchange="elegirapuesta()">
-                <option>Selecciona una apuesta</option>
-                <option value="pleno">Pleno</option>
-                <option value="paridad">Paridad</option>
-                <option value="color">Color</option>
-                <option value="mayores">Mayores</option>
-                <option value="menores">Menores</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select class="form-control"  id="valor-apuesta">
-                <option>Seleccione valor</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="cantidad">Cantidad de fichas:</label>
-            <input type="text" class="form-control" name="">
-        </div>
-        <div class="form-group">
-            <input type="button" class="btn btn-default" id="boton" onclick="jugar()" name="" value="TIRAR">
-        </div>
-    </form>
-    <p> Salio:<span id="numganador"></span> </p>
-    
+    <div class="form-group">
+        <label for="apuesta">Tipo de apuesta:</label>
+        <select class="form-control" id="clase-apuesta" onchange="elegirapuesta()">
+            <option value="selecciona">Selecciona una apuesta</option>
+            <option value="pleno">Pleno</option>
+            <option value="paridad">Paridad</option>
+            <option value="color">Color</option>
+            <option value="mayores">Mayores</option>
+            <option value="menores">Menores</option>
+        </select>
+    </div>
+    <div id="pleno" class="form-group">
+        <select id="pleno" class="form-control">
+            <option>Seleccione valor</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+    <div id="paridad"class="form-group">
+      <select id="paridad" class="form-control" name="">
+        <option>Seleccione valor</option>
+        <option value="par">par</option>
+        <option value="impar">impar</option>
+      </select>
+    </div>
+    <div id="color" class="form-group">
+      <select id="color" class="form-control" name="">
+        <option>Seleccione valor</option>
+        <option value="negro">negro</option>
+        <option value="rojo">rojo</option>
+      </select>
+    </div>
+    <div id="mayores" class="form-group">
+      <select id="mayores" class="form-control" name="">
+        <option>option</option>
+      </select>
+    </div>
+    <div id="menores" class="form-group">
+      <select id="menores" class="form-control" name="">
+        <option>option</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="cantidad">Cantidad de fichas:</label>
+      <input type="text" id="cantidad" class="form-control" value="fichas">
+    </div>
+    <div class="form-group">
+      <input type="button" class="btn btn-default" id="botonAgregar" onclick="" name="" value="Agregar apuesta">
+      <input type="button" class="btn btn-default" id="botonTirar" onclick="jugar()" name="" value="TIRAR">
+      <div id="premio" class="premio">
+      </div>
+    </div>
    </div>
-    <script type="text/javascript" src="js/accion.js"></script>
+  <script type="text/javascript" src="js/accion.js"></script>
 </body>
 </html>
