@@ -6,21 +6,16 @@ body{
   padding-top: 60px;
 }
 
-.navbar-brand{
-  font-family:Brown Fox;
-}
-
-.subtitulo{
+.titulo-encabezado,.titulo-noticia{
   font-family: 'Montserrat', sans-serif;
-  color: white;
 }
 
 p{
-    color:white;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.maldito{
-  font-weight: 800;
+.navbar-brand{
+  font-family:Brown Fox;
 }
 
 .jumbotron{
@@ -31,16 +26,16 @@ p{
   text-shadow: yellow 0.3em 0.3em 0.3em;
 }
 
-.tales{
-  width: 50%;
+.encabezado .titulo-encabezado{
+  margin: 7px 0 20px;
+  color: white;
+  background-color:rgba(165, 0, 0, 0.5);
 }
 
 .recuadro-texto{
-  /*border: 2px solid #A67300;*/
-  background-color: rgba(166, 125, 0, 0.5);
+  background-color: rgba(234, 234, 233, 0.6);
   text-align: justify;
-  font-family: 'Open Sans', sans-serif;
-  font-size: medium;
+  font-size: 18px;
   line-height: 1.5;
   padding: 20px;
 }
@@ -49,8 +44,18 @@ p.primera-linea{
   text-indent: 35px;
 }
 
-.form-novedades{
-  width: 200px;
+.recital{
+  margin: 1px 8px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.maldito{
+  font-weight: 800;
+}
+
+.tales{
+  width: 50%;
 }
 
 /*--------------------------------------article de noticia*/
@@ -72,11 +77,9 @@ p.primera-linea{
 }
 .noticia .titulo-noticia{
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
 }
 .noticia .subtitulo-noticia{
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 19px;
   color: black;
 }
@@ -98,9 +101,10 @@ figcaption{
 
 .contexto-publicidad{
   width: 180px;
-  text-align: justify;
+  text-align: center;
+  background-color: rgba(234, 234, 233, 0.6);
 }
-/*------------------------------footer*/
+/*------------------------------ inicio footer*/
 .footer{
   background-color: #A67300;
   overflow: auto;
@@ -121,4 +125,4 @@ figcaption{
   margin-right: auto;
   margin-bottom: 8px;
 }
-/*------------------------------footer*/
+/*------------------------------fin footer*/
