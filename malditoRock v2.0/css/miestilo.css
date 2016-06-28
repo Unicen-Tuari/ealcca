@@ -11,10 +11,8 @@ body{
 }
 
 .subtitulo{
-  color: black;
-  background-color: #A67300;
-  font-family: 'Dosis', sans-serif;
-  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 p{
@@ -31,7 +29,6 @@ p{
   background-repeat: no-repeat;
   color: white;
   text-shadow: yellow 0.3em 0.3em 0.3em;
-
 }
 
 .tales{
