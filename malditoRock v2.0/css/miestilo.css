@@ -10,7 +10,7 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-p{
+p,recuadro-texto-2{
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -20,10 +20,7 @@ p{
 
 .jumbotron{
   background-image: url("../image/banner.jpg");
-  background-size:cover;
-  background-repeat: no-repeat;
   color: white;
-  text-shadow: yellow 0.3em 0.3em 0.3em;
 }
 
 .encabezado .titulo-encabezado{
@@ -67,6 +64,72 @@ p.primera-linea{
   color:white;
 }
 
+.listcatalogos{
+list-style-image: url(../image/estrella.png);
+}
+
+.recuadro-texto-2{
+  color:white;
+  font-size: 19px;
+  background-color: rgba(65, 58, 58,0.5);
+}
+/*---------tabla------------*/
+.tabla_producto{
+  border-collapse:collapse;
+  border-color:black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  text-align: left;
+  line-height:1.5;
+}
+
+.tabla_producto th{
+  font-size:14px;
+  font-weight:normal;
+  padding:12px 20px;
+  border-style:solid;
+  border-width:1px;
+  overflow:hidden;
+  word-break:normal;
+  border-color:black;
+  color: black;
+  background-color:rgba(165, 0, 0, 0.5);
+}
+
+.tabla_producto td{
+  font-size:14px;
+  padding:5px 5px;
+  border-style:solid;
+  border-width:1px;
+  overflow:hidden;
+  word-break:normal; /*el comportamiento de la rotura de linea. normal es por defaul*/
+  border-color:black;
+  color:black;
+  background-color:white;
+}
+
+.tabla_producto .titulo_tabla{
+  font-weight:bold;
+  font-size:26px;
+  color:white;
+  text-align:center
+}
+
+.tabla_producto .fila-par{
+  background-color:#BDB9B9;
+}
+
+.tabla_producto .titulo_columna{
+  background-color:#666262;
+  font-weight:bold;
+}
+
+.tabla_producto .fila_impar{
+  background-color:white;
+}
+
+/*fin tabla*/
 /*--------------------------------------article de noticia*/
 .noticia{
   background-color: white;
