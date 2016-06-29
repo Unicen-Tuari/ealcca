@@ -10,8 +10,12 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-p,recuadro-texto-2{
+p,recuadro-texto-2,.letrero{
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.letrero{
+  color: white;
 }
 
 .navbar-brand{
