@@ -1,15 +1,15 @@
 "use strict";
 const _credito = 100;  //credito con el que disponemos
 const _valorApuesta = 1;	//costo de la apuesta
-const _abonoPleno = 10;
+const _abonoPleno = 10;	
 const _abonoPares = 5;
 const _abonoColor = 5;
 const _abonoMayores = 4;
 const _abonoMenores = 4;
 
-function Credito(){   //-----------------------OBJETO Credito-------------------------//
-  var saldo = _credito;   // privado
-	Credito.prototype.getSaldo = function(){   //Creamos una funcion getSaldo para ingresar
+function Credito(){		//-----------------------OBJETO Credito-------------------------//
+	var saldo = _credito;   // privado
+	Credito.prototype.getSaldo = function(){   //Creamos una funcion getSaldo para ingresar 
 		return saldo;
 	}
 	Credito.prototype.incrementar = function(n){  //nos pasamos como parametro el saldo
@@ -21,28 +21,28 @@ function Credito(){   //-----------------------OBJETO Credito-------------------
 };
 
 function Apuesta(){		//-----------------------OBJETO Apuesta-------------------------//
-  this.valor;
+	this.valor;	
 	this.tipo;
 	this.cantidad;
 };
 
-function Ruleta(){    //-----------------------OBJETO Ruleta-------------------------//
-  Ruleta.prototype.tirar = function(){
+function Ruleta(){		//-----------------------OBJETO Ruleta-------------------------//
+	Ruleta.prototype.tirar = function(){
 			return Math.floor((Math.random() * 11));  //la cantidad 11 por el numero de casillas
 	}
 };
 
-function Casilla(n){	//-----------------------OBJETO Casilla-------------------------//
+function Casilla(n){		//-----------------------OBJETO Casilla-------------------------//
 	this.valor = parseInt(n);
 	this.elcolor = String("");
 };
 
-function Juego(){     //-----------------------OBJETO Juego-------------------------//
-  this.listaApuestas=[];		 //arr de objetos Apuesta
-  this.listaCasilleros=[];
-  this.flag="";
-  this.credito = new Credito();//Instancia del objeto Credito
-  this.revancha=false;
+function Juego(){   //-----------------------OBJETO Juego-------------------------//
+	this.listaApuestas=[];		 //arr de objetos Apuesta
+	this.listaCasilleros=[];  
+	this.flag="";                
+	this.credito = new Credito();//Instancia del objeto Credito
+	this.revancha=false;        
 
 	Juego.prototype.iniciar = function(){  //-------METODOS del objeto JUEGO-----------//
 		this.cargaValores();	//carga listaCasilleros con objetos Casilla seteados por valor y color
@@ -54,7 +54,7 @@ function Juego(){     //-----------------------OBJETO Juego---------------------
 		document.getElementById('mayores').firstElementChild.options[0].text = "Del 5 al 10";
 		document.getElementById('menores').firstElementChild.options[0].text = "Del 6 al 0";
 	}
-  Juego.prototype.cargaValores = function (){
+	Juego.prototype.cargaValores = function (){
 		for (var i = 0; i < 11; i++) {
 	    this.listaCasilleros[i]=new Casilla(i);
 			if(i!=0){
@@ -93,7 +93,7 @@ function Juego(){     //-----------------------OBJETO Juego---------------------
 			}
 	  	}
 	}
-  Juego.prototype.ocultarSelects = function(){
+	Juego.prototype.ocultarSelects = function(){
 		var select = document.getElementById("clase-apuesta");
 		for (var i = 1; i < select.length; i++) {
 			var id = String(select.options[i].value);
@@ -136,15 +136,15 @@ function Juego(){     //-----------------------OBJETO Juego---------------------
 					document.getElementById(tipoApuesta).style.position="relative";
 					this.flag = tipoApuesta;
 					break;
-			case "menores":
+			case "menores": 
 					this.ocultarSelects();
 					document.getElementById(tipoApuesta).style.visibility="visible";
 					document.getElementById(tipoApuesta).style.position="relative";
 					this.flag = tipoApuesta;
-					break;
+					break; 
 		}
 	}
-  Juego.prototype.validarCantidad = function(n){
+	Juego.prototype.validarCantidad = function(n){
 		if (n == ""){
 			alert("Tiene que apostar minimo 1 ficha")
 		}
@@ -192,7 +192,7 @@ function Juego(){     //-----------------------OBJETO Juego---------------------
 			}
 		}
 	}
-  Juego.prototype.imprimeTirada = function(random){
+	Juego.prototype.imprimeTirada = function(random){
 		for (var i = 0; i < this.listaCasilleros.length; i++) {
 			if(this.listaCasilleros[i].valor == random){
 				if (random != 0) {
@@ -213,7 +213,7 @@ function Juego(){     //-----------------------OBJETO Juego---------------------
 			this.imprimeTirada(random);
 			for (var i = 0; i < this.listaApuestas.length; i++) {
 				var apuesta = this.listaApuestas[i].tipo;
-				switch (apuesta) {
+				switch (apuesta) { 
 					case "pleno":
 							if (random == this.listaApuestas[i].valor) {
 								if (random % 4 == 0) {
@@ -275,5 +275,4 @@ function Juego(){     //-----------------------OBJETO Juego---------------------
 			document.getElementById('lista').innerHTML = "";
 		}
 	}
-
 };
