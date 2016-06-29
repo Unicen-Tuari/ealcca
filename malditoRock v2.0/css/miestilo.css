@@ -58,6 +58,15 @@ p.primera-linea{
   width: 50%;
 }
 
+#googleMap{
+  height: 300px;
+  width: 530px;
+}
+
+.ubicacion{
+  color:white;
+}
+
 /*--------------------------------------article de noticia*/
 .noticia{
   background-color: white;
