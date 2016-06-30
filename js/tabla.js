@@ -1,6 +1,8 @@
+"use strict";
+
 $('document').ready(function(){     //siempre para iniciar con codigo Jquery, despues que el DOM haya sido cargado.
 									//esto nos puede avisar cuando la pagian este completamente cargada.
-	var grupo = 31;			        // Definicion de Variables el nro del grupo 
+	var grupo = 31;			        // Definicion de Variables el nro del grupo
 
 		function obtenerInfo(grupo){
 		$.ajax({
@@ -45,7 +47,7 @@ $('document').ready(function(){     //siempre para iniciar con codigo Jquery, de
 			$('#textura').val('');
 			var descripcion = $('#descripcion').val();
 			$('#descripcion').val('');
-			
+
 
 			var registro = [producto, codigo, colores, talles, textura, descripcion];
 			var registroCompleto = {
@@ -80,5 +82,3 @@ $('document').ready(function(){     //siempre para iniciar con codigo Jquery, de
 		agregarInfo(grupo);
 	});
 });
-
-
