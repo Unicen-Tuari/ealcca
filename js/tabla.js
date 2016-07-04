@@ -72,7 +72,7 @@ $('document').ready(function(){     //siempre para iniciar con codigo Jquery, de
 					'group': grupo,
 					'thing': registro    // En esta caso tengo un arreglo, pero se recomiendo un objeto JSON es mas ligero
 			};
-			if( producto.length > 0 & codigo.length > 0 & colores.length > 0 & talles.length > 0 & textura.length > 0 & descripcion.length > 0){
+			//if( producto.length > 0 & codigo.length > 0 & colores.length > 0 & talles.length > 0 & textura.length > 0 & descripcion.length > 0){
 				$.ajax({
 					type: 'POST',
 					dataType: 'JSON',						// el tipo de informacion que se espera recibir como respuesta del servidor
@@ -87,10 +87,10 @@ $('document').ready(function(){     //siempre para iniciar con codigo Jquery, de
 								obtenerInfo(grupo);
 							}
 				});
-			} else {
-				alert('advertencia! agrege algo');
-				obtenerInfo(grupo);
-			};
+			// } else {
+			// 	alert('advertencia! agrege algo');
+			// 	obtenerInfo(grupo);
+			// };
 		};
 
 	 obtenerInfo(grupo);  //iniciamos la pagina solicitando la info q tenga
