@@ -36,25 +36,42 @@ $('document').ready(function(){     //siempre para iniciar con codigo Jquery, de
 	};
 
 		function agregarInfo(grupo){
-			var producto = $('#producto').val();
-			$('#producto').val('');
-			var codigo = $('#codigo').val();
-			$('#codigo').val('');
-			var colores = $('#colores').val();
-			$('#colores').val('');
-			var talles = $('#talles').val();
-			$('#talles').val('');
-			var textura = $('#textura').val();
-			$('#textura').val('');
-			var descripcion = $('#descripcion').val();
-			$('#descripcion').val('');
+			// var producto = $('#producto').val();
+			// $('#producto').val('');
+			// var codigo = $('#codigo').val();
+			// $('#codigo').val('');
+			// var colores = $('#colores').val();
+			// $('#colores').val('');
+			// var talles = $('#talles').val();
+			// $('#talles').val('');
+			// var textura = $('#textura').val();
+			// $('#textura').val('');
+			// var descripcion = $('#descripcion').val();
+			// $('#descripcion').val('');
+			//
+			//
+			// var registro = [producto, codigo, colores, talles, textura, descripcion];
 
+			var registro = {    // objeto JSON
+				"producto": " ",
+				"codigo": " ",
+				"colores": " ",
+				"talles": " ",
+				"textura": " ",
+				"descripcion": " "
+			};
 
-			var registro = [producto, codigo, colores, talles, textura, descripcion];
+			registro.producto = $('#producto').val();     //asigno el valor del input
+			registro.codigo = $('#codigo').val();
+			registro.colores = $('#colores').val();
+			registro.talles = $('#talles').val();
+			registro.textura = $('#textura').val();
+			registro.descripcion = $('#descripcion').val();
+
 			var registroCompleto = {
 					'group': grupo,
 					'thing': registro    // En esta caso tengo un arreglo, pero se recomiendo un objeto JSON es mas ligero
-				};
+			};
 			if( producto.length > 0 & codigo.length > 0 & colores.length > 0 & talles.length > 0 & textura.length > 0 & descripcion.length > 0){
 				$.ajax({
 					type: 'POST',
