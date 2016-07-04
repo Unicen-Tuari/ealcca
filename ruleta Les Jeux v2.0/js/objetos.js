@@ -26,7 +26,7 @@ document.getElementsByTagName('body')[0].onload = function(){
 // });
 
 function Credito(){		//-----------------------OBJETO Credito-------------------------//
-	var saldo = _credito;   // privado
+	var saldo = _credito;   // privado para no ser manipulado por el jugador
 	Credito.prototype.getSaldo = function(){   //Creamos una funcion getSaldo para ingresar
 		return saldo;
 	}
@@ -52,12 +52,12 @@ function Ruleta(){		//-----------------------OBJETO Ruleta----------------------
 
 function Casilla(n){		//-----------------------OBJETO Casilla-------------------------//
 	this.valor = parseInt(n);
-	this.elcolor = String("");
+	this.elcolor = String("");   //en el caso del cero, no se le asigna color
 };
 
 function Juego(){   //-----------------------OBJETO Juego-------------------------//
 	this.listaApuestas=[];		 //arr de objetos Apuesta
-	this.listaCasilleros=[];
+	this.listaCasilleros=[];   //arr de casilleros
 	this.flag="";
 	this.credito = new Credito();//Instancia del objeto Credito
 	this.revancha=false;
@@ -73,7 +73,7 @@ function Juego(){   //-----------------------OBJETO Juego-----------------------
 		document.getElementById('menores').firstElementChild.options[0].text = "Del 6 al 0";
 	}
 	Juego.prototype.cargaValores = function (){
-		for (var i = 0; i < 11; i++) {
+		for (var i = 0; i < 11; i++) {       //cargamos el valor y color del objeto Casilla
 	    this.listaCasilleros[i]=new Casilla(i);
 			if(i!=0){
 				switch(i){
@@ -109,7 +109,7 @@ function Juego(){   //-----------------------OBJETO Juego-----------------------
 						break;
 				}
 			}
-	  	}
+	  }
 	}
 	Juego.prototype.ocultarSelects = function(){
 		var select = document.getElementById("clase-apuesta");

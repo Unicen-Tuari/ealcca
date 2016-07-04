@@ -36,8 +36,8 @@ $('document').ready(function(){     //siempre para iniciar con codigo Jquery, de
 	};
 
 		function agregarInfo(grupo){
-			// var producto = $('#producto').val();
-			// $('#producto').val('');
+			// var producto = $('#producto').val();			//asigno el valor del input
+			// $('#producto').val('');									//seteo el input
 			// var codigo = $('#codigo').val();
 			// $('#codigo').val('');
 			// var colores = $('#colores').val();
@@ -62,7 +62,7 @@ $('document').ready(function(){     //siempre para iniciar con codigo Jquery, de
 			};
 
 			registro.producto = $('#producto').val();     //asigno el valor del input
-			registro.codigo = $('#codigo').val();
+			registro.codigo = "dato prueba"; //$('#codigo').val();
 			registro.colores = $('#colores').val();
 			registro.talles = $('#talles').val();
 			registro.textura = $('#textura').val();
