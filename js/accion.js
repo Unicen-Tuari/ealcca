@@ -18,14 +18,14 @@ $('document').ready(function(){
 
   /* La funcion que cargara la pagina segun la seccion */
   function cargarSeccion(seccion){
-    $.ajax({
-      type: 'GET',
-      dataType: 'HTML',
+    $.ajax({       // se pasa la direccion url de la pagina
+      type: 'GET',        // metodo
+      dataType: 'HTML',   // tipo de dato que espero recibir (XML,JSON,HTML,ETC)
       url:seccion+'.html',
-      success: function(data){
+      success: function(data){      // funcion que se ejecuta cuando el request fue exitoso
             $('#contenedor-principal').html(data);
           },
-      error: function(){
+      error: function(){        // funcion cuando el request da error
             alert('No se puede cargar la pagina ' + seccion);
           }
     });
@@ -34,7 +34,7 @@ $('document').ready(function(){
   /*lo primero que carga*/
   cargarSeccion(inicio);
 
-  /*pasamos las secciones a cargar*/
+  /* pasamos las secciones a cargar */
   $('#inicio').on('click', function(event){
     event.preventDefault();
     $(".nav").find(".active").removeClass("active");
@@ -134,6 +134,3 @@ $('document').ready(function(){
   });
 
 });
-
-
-
