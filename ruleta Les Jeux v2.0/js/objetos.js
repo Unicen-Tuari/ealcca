@@ -1,15 +1,33 @@
 "use strict";
+
 const _credito = 100;  //credito con el que disponemos
 const _valorApuesta = 1;	//costo de la apuesta
-const _abonoPleno = 10;	
+const _abonoPleno = 10;
 const _abonoPares = 5;
 const _abonoColor = 5;
 const _abonoMayores = 4;
 const _abonoMenores = 4;
 
+
+var mijuego = new Juego();	//instancia de mi objeto Juego
+
+// window.onload = function(){ //inicio el juego al cargar el DOM (body)
+// 	mijuego.iniciar();
+// }
+
+// document.getElementsByTagName('body')[0].onload = mijuego.iniciar(); modo de onload del body atravez del uso del DOM
+
+document.getElementsByTagName('body')[0].onload = function(){
+	mijuego.iniciar();
+}
+
+// $(document).ready(function () {         // modo de onload del body con jquery
+//     mijuego.iniciar();
+// });
+
 function Credito(){		//-----------------------OBJETO Credito-------------------------//
 	var saldo = _credito;   // privado
-	Credito.prototype.getSaldo = function(){   //Creamos una funcion getSaldo para ingresar 
+	Credito.prototype.getSaldo = function(){   //Creamos una funcion getSaldo para ingresar
 		return saldo;
 	}
 	Credito.prototype.incrementar = function(n){  //nos pasamos como parametro el saldo
@@ -21,7 +39,7 @@ function Credito(){		//-----------------------OBJETO Credito--------------------
 };
 
 function Apuesta(){		//-----------------------OBJETO Apuesta-------------------------//
-	this.valor;	
+	this.valor;
 	this.tipo;
 	this.cantidad;
 };
@@ -39,10 +57,10 @@ function Casilla(n){		//-----------------------OBJETO Casilla-------------------
 
 function Juego(){   //-----------------------OBJETO Juego-------------------------//
 	this.listaApuestas=[];		 //arr de objetos Apuesta
-	this.listaCasilleros=[];  
-	this.flag="";                
+	this.listaCasilleros=[];
+	this.flag="";
 	this.credito = new Credito();//Instancia del objeto Credito
-	this.revancha=false;        
+	this.revancha=false;
 
 	Juego.prototype.iniciar = function(){  //-------METODOS del objeto JUEGO-----------//
 		this.cargaValores();	//carga listaCasilleros con objetos Casilla seteados por valor y color
@@ -136,12 +154,12 @@ function Juego(){   //-----------------------OBJETO Juego-----------------------
 					document.getElementById(tipoApuesta).style.position="relative";
 					this.flag = tipoApuesta;
 					break;
-			case "menores": 
+			case "menores":
 					this.ocultarSelects();
 					document.getElementById(tipoApuesta).style.visibility="visible";
 					document.getElementById(tipoApuesta).style.position="relative";
 					this.flag = tipoApuesta;
-					break; 
+					break;
 		}
 	}
 	Juego.prototype.validarCantidad = function(n){
@@ -213,7 +231,7 @@ function Juego(){   //-----------------------OBJETO Juego-----------------------
 			this.imprimeTirada(random);
 			for (var i = 0; i < this.listaApuestas.length; i++) {
 				var apuesta = this.listaApuestas[i].tipo;
-				switch (apuesta) { 
+				switch (apuesta) {
 					case "pleno":
 							if (random == this.listaApuestas[i].valor) {
 								if (random % 4 == 0) {
