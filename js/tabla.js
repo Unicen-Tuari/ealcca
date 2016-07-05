@@ -26,7 +26,7 @@ $('document').ready(function(){     //siempre para iniciar con codigo Jquery, de
 							talles = data.information[i]['thing']['talles'];
 							textura = data.information[i]['thing']['textura'];
 							descripcion = data.information[i]['thing']['descripcion'];
-							eliminar = '<input class="btn eliminar" type="button" value="eliminar"></input>';
+							eliminar = '<input class="btn btn-danger eliminar" type="button" value="eliminar"></input>';
 							registro = '<tr><td class="horario">' + producto + '</td><td>' + codigo + '</td><td>' + colores + '</td><td>' + talles + '</td><td>' + textura + '</td><td>' + descripcion	+  '</td><td>' + eliminar +'</td></tr>';
 							$('#descripcion-lista').append(registro);				// añadimos
 						}
