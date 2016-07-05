@@ -58,7 +58,7 @@ function Casilla(n){		//-----------------------OBJETO Casilla-------------------
 function Juego(){   //-----------------------OBJETO Juego-------------------------//
 	this.listaApuestas=[];		 //arr de objetos Apuesta
 	this.listaCasilleros=[];   //arr de casilleros
-	this.flag="";
+	this.apuestaSeleccionada="";
 	this.credito = new Credito();//Instancia del objeto Credito
 	this.revancha=false;
 
@@ -121,48 +121,48 @@ function Juego(){   //-----------------------OBJETO Juego-----------------------
 			}
 		}
 	}
-  	Juego.prototype.elegirApuesta = function(){
-		var tipoApuesta = document.getElementById('clase-apuesta').value;
-    	switch (tipoApuesta) {
-			case "selecciona":
-					this.flag = "";
-					this.ocultarSelects();
-					break;
-      		case "pleno":
-					this.flag = tipoApuesta;
-					this.ocultarSelects();
-          			document.getElementById(tipoApuesta).style.visibility="visible";
-					document.getElementById(tipoApuesta).style.position="relative";
-					document.getElementById(tipoApuesta).firstElementChild.options.item(0).selected="selected"; //reset del select
-          			break;
-      		case "paridad":
-					this.flag = tipoApuesta;
-					this.ocultarSelects();
-					document.getElementById(tipoApuesta).style.visibility="visible";
-					document.getElementById(tipoApuesta).style.position="relative";
-					document.getElementById(tipoApuesta).firstElementChild.options.item(0).selected="selected";
-					break;
-			case "color":
-					this.ocultarSelects();
-					document.getElementById(tipoApuesta).style.visibility="visible";
-					document.getElementById(tipoApuesta).style.position="relative";
-					this.flag = tipoApuesta;
-					break;
-			case "mayores":
-					this.ocultarSelects();
-        			document.getElementById(tipoApuesta).style.visibility="visible";
-					document.getElementById(tipoApuesta).style.position="relative";
-					this.flag = tipoApuesta;
-					break;
-			case "menores":
-					this.ocultarSelects();
-					document.getElementById(tipoApuesta).style.visibility="visible";
-					document.getElementById(tipoApuesta).style.position="relative";
-					this.flag = tipoApuesta;
-					break;
+	Juego.prototype.elegirApuesta = function(){   // metodo cuando se hace el cambio del select
+	var tipoApuesta = document.getElementById('clase-apuesta').value;
+  	switch (tipoApuesta) {       // segun el tipo de apuesta elegida nos muestra y oculta los select
+		case "selecciona":
+				this.apuestaSeleccionada = "";
+				this.ocultarSelects();
+				break;
+    case "pleno":
+				this.apuestaSeleccionada = tipoApuesta;
+				this.ocultarSelects();
+        document.getElementById(tipoApuesta).style.visibility="visible";
+				document.getElementById(tipoApuesta).style.position="relative";
+				document.getElementById(tipoApuesta).firstElementChild.options.item(0).selected="selected"; //reset del select
+    		break;
+    case "paridad":
+				this.apuestaSeleccionada = tipoApuesta;
+				this.ocultarSelects();
+				document.getElementById(tipoApuesta).style.visibility="visible";
+				document.getElementById(tipoApuesta).style.position="relative";
+				document.getElementById(tipoApuesta).firstElementChild.options.item(0).selected="selected";
+				break;
+		case "color":
+				this.ocultarSelects();
+				document.getElementById(tipoApuesta).style.visibility="visible";
+				document.getElementById(tipoApuesta).style.position="relative";
+				this.apuestaSeleccionada = tipoApuesta;
+				break;
+		case "mayores":
+				this.ocultarSelects();
+      	document.getElementById(tipoApuesta).style.visibility="visible";
+				document.getElementById(tipoApuesta).style.position="relative";
+				this.apuestaSeleccionada = tipoApuesta;
+				break;
+		case "menores":
+				this.ocultarSelects();
+				document.getElementById(tipoApuesta).style.visibility="visible";
+				document.getElementById(tipoApuesta).style.position="relative";
+				this.apuestaSeleccionada = tipoApuesta;
+				break;
 		}
 	}
-	Juego.prototype.validarCantidad = function(n){
+	Juego.prototype.validarCantidad = function(n){    // validamos la cantidad ingresada(n)
 		if (n == ""){
 			alert("Tiene que apostar minimo 1 ficha")
 		}
@@ -178,7 +178,7 @@ function Juego(){   //-----------------------OBJETO Juego-----------------------
 				}
 			}
 	}
-	Juego.prototype.imprimemiApuesta = function(miapuesta){
+	Juego.prototype.imprimemiApuesta = function(miapuesta){   //imprimimos la apuesta en el div lista
 		var lista = "";
 		for (var i = 0; i < miapuesta.length; i++) {
 			lista += "Valor:"+miapuesta[i].valor+"-Tipo:"+miapuesta[i].tipo+"-Cantidad:"+miapuesta[i].cantidad+"<br>";
@@ -186,24 +186,24 @@ function Juego(){   //-----------------------OBJETO Juego-----------------------
 		document.getElementById('lista').innerHTML = lista;
 	}
 	Juego.prototype.agregarApuesta = function(){
-		if (this.flag != "") {
-			var id = String(this.flag); 	//guardamos el select elegido
+		if (this.apuestaSeleccionada != "") {    //tiene que existir una apuesta
+			var id = String(this.apuestaSeleccionada); 	//guardamos el select elegido
 			var tagSelect = document.getElementById(id).children;	// entramos al children y guardamos el tipo de apuesta
 			var cantidad = parseInt(document.getElementById('cantidad').value); //guardamos la cantidad de fichas
 			var validarCantidad = this.validarCantidad(cantidad);	//Controlamos la cantidad con un boolean
 			if (validarCantidad) {
 				if(tagSelect[0].value != "Seleccione valor"){
-					var miApuesta = new Apuesta();
+					var miApuesta = new Apuesta();   //instancia del objeto Apuesta y guardamos los datos(valor,tipo y cantidad)
 					miApuesta.valor = tagSelect[0].value;
 					miApuesta.tipo = id;
 					miApuesta.cantidad = cantidad;
-					if (miApuesta.tipo == "pleno" && miApuesta.valor % 4 == 0 && miApuesta.valor != 0) {
+					if (miApuesta.tipo == "pleno" && miApuesta.valor % 4 == 0 && miApuesta.valor != 0) {     //si la apuesta es multiplo de 4 se informa por pantalla
 						alert("PROMOCION; Ud esta apostando X4 / el valor de la apuesta X2 / pero si gana es X3!!!");
-						this.credito.disminuir(cantidad * _valorApuesta * 2);
+						this.credito.disminuir(cantidad * _valorApuesta * 2);          //se hace el descuento por apuesta al multiplo
 					}else {
-						this.credito.disminuir(cantidad * _valorApuesta);
+						this.credito.disminuir(cantidad * _valorApuesta);							//descuanto de la apuesta por defecto $1
 					}
-					this.listaApuestas.push(miApuesta);  //agregamos a la lista(arr) de apuestas miApuesta
+					this.listaApuestas.push(miApuesta);  	//agregamos a la lista(arr) de apuestas miApuesta
 					this.imprimemiApuesta(this.listaApuestas);
 				}
 				document.getElementById('saldo').innerHTML = this.credito.getSaldo();
@@ -227,7 +227,7 @@ function Juego(){   //-----------------------OBJETO Juego-----------------------
 		if(document.getElementById('lista').innerHTML != ""){
 			var premio = 0;
 			var miRuleta = new Ruleta(); // instancia del objeto Ruleta
-			var random = miRuleta.tirar();
+			var random = miRuleta.tirar();  //guardamos el metodo(random) de nuestro objeto Ruleta
 			this.imprimeTirada(random);
 			for (var i = 0; i < this.listaApuestas.length; i++) {
 				var apuesta = this.listaApuestas[i].tipo;
@@ -285,7 +285,7 @@ function Juego(){   //-----------------------OBJETO Juego-----------------------
 						document.getElementById('saldo').innerHTML = this.credito.getSaldo();
 						this.evaluar();
 					}
-					}else {
+				}else {
 						this.revancha=false;
 					}
 			}
