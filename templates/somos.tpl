@@ -1,4 +1,3 @@
-{include file = "header.tpl"}
       <article>
         <div class="row">
           <div class="col-lg-1">
@@ -96,4 +95,3 @@
           </div>
         </div>
       </article>
-{include file = "footer.tpl"}

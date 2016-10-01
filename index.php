@@ -1,19 +1,58 @@
 <?php
- require('libs/Smarty.class.php'); //incluimos y evaluamos el archivo smarty
- $smarty = new Smarty; //creamos una instancia Smarty
- $page_var = 'page';
- $page_request = $_REQUEST[$page_var];
- $menu = array('home' => 'home.tpl','somos'=>'somos.tpl' );
- if (array_key_exists($page_request,$menu))
-  $template = $menu[$page_request];
- else {
-   $template = 'home.tpl';
+ include_once ('config/router_config.php'); //incluimos el archivo del router
+ include_once ('controller/navegacion_controller.php'); //incluimos archivo del navegador
+
+ $navegacionController = new NavegacionController();
+
+ if(!array_key_exists(RouterConfig::$ACTION,$_REQUEST)){
+   $navegacionController->index(); //carga el header,nav y footer
  }
- $smarty->compile_id = $template;
- $smarty->caching = 0;
- $smarty->assign('menu',$menu);
- $smarty->assign('template',$template);
- $smarty->assign('page_var',$page_var);
- $smarty->assign("titulo","Maldiito Rock"); //damos valor a las variables a usar en el tpl
- $smarty->display('home.tpl');
+ else{
+   switch ($_REQUEST[RouterConfig::$ACTION]) {
+    case RouterConfig::$ACTION_INICIO:
+      $navegacionController->inicio(); //cargamos la section de inicio
+      break;
+    case RouterConfig::$ACTION_SOMOS:
+      $navegacionController->somos(); //cargamos la section de somos
+      break;
+    case RouterConfig::$ACTION_NOTICIAS:
+      $navegacionController->noticias(); //cargamos la section de somos
+      break;
+    case RouterConfig::$ACTION_CONTACTO:
+      $navegacionController->contacto(); //cargamos la section de somos
+      break;
+    case RouterConfig::$ACTION_NACIONAL:
+      $navegacionController->nacional();
+      break;
+    case RouterConfig::$ACTION_INTER:
+      $navegacionController->inter();
+      break;
+    case RouterConfig::$ACTION_REGGAE:
+      $navegacionController->reggae();
+      break;
+    case RouterConfig::$ACTION_COMICS:
+      $navegacionController->comics();
+      break;
+    case RouterConfig::$ACTION_CALAVERAS:
+      $navegacionController->calaveras();
+      break;
+    case RouterConfig::$ACTION_CAMISAS:
+      $navegacionController->camisas();
+      break;
+    case RouterConfig::$ACTION_ACCESORIOS:
+      $navegacionController->accesorios();
+      break;
+    case RouterConfig::$ACTION_BUSOS:
+      $navegacionController->busos();
+      break;
+    case RouterConfig::$ACTION_MMA:
+      $navegacionController->mma();
+      break;
+    case RouterConfig::$ACTION_INSTRUMENTOS:
+      $navegacionController->instrumentos();
+      break;
+   }
+ }
+
+
 ?>
