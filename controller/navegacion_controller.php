@@ -15,6 +15,14 @@ class NavegacionController extends MainController{
     $this->navegacionView->showSomos();
   }
 
+  function catalogos(){
+    $this->navegacionView->showCatalogos();
+  }
+
+  function catalogo(){
+    $this->navegacionView->showCatalogo();
+  }
+  
   function noticias(){
     $this->navegacionView->showNoticias();
   }

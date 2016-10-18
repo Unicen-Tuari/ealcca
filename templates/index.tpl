@@ -32,9 +32,10 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li id="inicio" class="active"><a href="#">Inicio</a></li>
                   <li id="somos"><a href="#">Quienes somos</a></li>
-                  <li class="dropdown">
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                            aria-expanded="false">Catalogos<span class="caret"></span></a>
+                  <li id="catalogos"><a href="#">Catalogos</a></li>
+                  <!-- <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Catalogos<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li id="nacional"><a href="#">Rock Nacional</a></li>
                       <li id="inter"><a href="#">Rock Internacional</a></li>
@@ -47,7 +48,7 @@
                       <li id="mma"><a href="#">MMA</a></li>
                       <li id="instrumentos"><a href="#">Instrumentos</a></li>
                     </ul>
-                  </li>
+                  </li> -->
                   <li id="noticias"><a href="#">Noticias</a></li>
                   <li id="contacto"><a href="#">Contacto</a></li>
                 </ul>
@@ -57,7 +58,7 @@
         </div>
       </div> <!--FIN NAVBAR-->
 
-      <div id="contenedor-principal"> <!-- ############  CONTENEDOR-PRINCIPAL  ############ -->
+      <div class="row" id="contenedor-principal"> <!-- ############  CONTENEDOR-PRINCIPAL  ############ -->
 
       </div>
 

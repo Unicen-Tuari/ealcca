@@ -1,8 +1,10 @@
-<?php
-class RouterConfig{
+<?php  //agregamos las acciones disponibles - es nuetro router
+class ConfigApp{
   public static $ACTION = 'action';
   public static $ACTION_INICIO = 'inicio';
   public static $ACTION_SOMOS = 'somos';
+  public static $ACTION_CATALOGOS = 'catalogos';
+  public static $ACTION_CATALOGO = 'catalogo';
   public static $ACTION_NOTICIAS = 'noticias';
   public static $ACTION_CONTACTO = 'contacto';
   public static $ACTION_NACIONAL = 'nacional';
@@ -16,5 +18,4 @@ class RouterConfig{
   public static $ACTION_MMA = 'mma';
   public static $ACTION_INSTRUMENTOS = 'instrumentos';
 }
-
- ?>
+?>

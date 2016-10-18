@@ -15,6 +15,14 @@ class NavegacionView extends MainView{
     $this->smarty->display('somos.tpl');
   }
 
+  function showCatalogos(){
+    $this->smarty->display('catalogos.tpl');
+  }
+
+  function showCatalogo(){
+    $this->smarty->display('catalogo.tpl');
+  }
+
   function showNoticias(){
     $this->smarty->display('noticias.tpl');
   }

@@ -1,53 +1,24 @@
       <article>
-        <div class="row">
-          <div class="col-lg-3">
 
-          </div>
-          <div class="col-lg-8">
+        <div class="row">
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-12">
             <div class="encabezado">
               <h3 class="titulo-encabezado page-header">RocK Nacional</h3>
             </div>
           </div>
-          <div class="col-lg-1">
-
-          </div>
-
         </div>
         <div class="row">
-          <div class=" col-lg-1">
-
-          </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
-            <div class="recuadro-texto-2">
-              <ul class="listcatalogos" >
-                <li class="lista">Inicio</li>
-                <li class="lista">Rock Nacional</li>
-                <li class="lista">Rock Internacional</li>
-                <li class="lista">Reggae</li>
-                <li class="lista">Comics</li>
-                <li class="lista">Calaveras</li>
-                <li class="lista">Camisas</li>
-                <li class="lista">Accesorios</li>
-                <li class="lista">Busos</li>
-                <li class="lista">MMA</li>
-                <li class="lista">instrumentos</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-3">
             <img class="img-responsive img-rounded"   src="image/demo200.jpg" alt="" />
           </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-3">
             <img class="img-responsive img-rounded"   src="image/demo200.jpg" alt="" />
           </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-3">
             <img class="img-responsive img-rounded"   src="image/demo200.jpg" alt="" />
           </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-3">
             <img class="img-responsive img-rounded"   src="image/demo200.jpg" alt="" />
-          </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-1">
-
           </div>
         </div>
         <div class="row">
@@ -56,31 +27,22 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-2 col-md-2 col-lg-3">
-
-          </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-3">
             <img class="img-responsive img-rounded"   src="image/demo200.jpg" alt="" />
           </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-3">
             <img class="img-responsive img-rounded"   src="image/demo200.jpg" alt="" />
           </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-3">
             <img class="img-responsive img-rounded"   src="image/demo200.jpg" alt="" />
           </div>
-          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-6 col-sm-2 col-md-2 col-lg-3">
             <img class="img-responsive img-rounded"   src="image/demo200.jpg" alt="" />
-          </div>
-          <div class="col-xs-6 col-sm-1 col-md-1 col-lg-1">
-
           </div>
         </div>
 
         <div class="row text-center">
-          <div class="col-lg-3">
-
-          </div>
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="">
               <table class="tabla_producto">
                 <thead>
@@ -111,9 +73,6 @@
               </table>
               <button id="agregar-descripcion" type="button" class="btn btn-primary">Agregar</button>
             </div>
-          </div>
-          <div class="col-lg-1">
-
           </div>
         </div>
       </article>

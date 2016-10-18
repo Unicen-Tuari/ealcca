@@ -1,58 +1,63 @@
-<?php
- include_once ('config/router_config.php'); //incluimos el archivo del router
+<?php  // 1ro - la forma de acceder al sistema
+ include_once ('config/config_app.php'); //incluimos el archivo del router
  include_once ('controller/navegacion_controller.php'); //incluimos archivo del navegador
 
  $navegacionController = new NavegacionController();
 
- if(!array_key_exists(RouterConfig::$ACTION,$_REQUEST)){
+ if(!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){    //comprobamos parametros de la URI
    $navegacionController->index(); //carga el header,nav y footer
  }
  else{
-   switch ($_REQUEST[RouterConfig::$ACTION]) {
-    case RouterConfig::$ACTION_INICIO:
-      $navegacionController->inicio(); //cargamos la section de inicio
+   switch ($_REQUEST[ConfigApp::$ACTION]) {
+    case ConfigApp::$ACTION_INICIO:
+      $navegacionController->inicio();
       break;
-    case RouterConfig::$ACTION_SOMOS:
-      $navegacionController->somos(); //cargamos la section de somos
+    case ConfigApp::$ACTION_SOMOS:
+      $navegacionController->somos();
       break;
-    case RouterConfig::$ACTION_NOTICIAS:
-      $navegacionController->noticias(); //cargamos la section de somos
+    case ConfigApp::$ACTION_CATALOGOS:
+      $navegacionController->catalogos();
       break;
-    case RouterConfig::$ACTION_CONTACTO:
-      $navegacionController->contacto(); //cargamos la section de somos
+    case ConfigApp::$ACTION_CATALOGO:
+      $navegacionController->catalogo();
       break;
-    case RouterConfig::$ACTION_NACIONAL:
+    case ConfigApp::$ACTION_NOTICIAS:
+      $navegacionController->noticias();
+      break;
+    case ConfigApp::$ACTION_CONTACTO:
+      $navegacionController->contacto();
+      break;
+    case ConfigApp::$ACTION_NACIONAL:
       $navegacionController->nacional();
       break;
-    case RouterConfig::$ACTION_INTER:
+    case ConfigApp::$ACTION_INTER:
       $navegacionController->inter();
       break;
-    case RouterConfig::$ACTION_REGGAE:
+    case ConfigApp::$ACTION_REGGAE:
       $navegacionController->reggae();
       break;
-    case RouterConfig::$ACTION_COMICS:
+    case ConfigApp::$ACTION_COMICS:
       $navegacionController->comics();
       break;
-    case RouterConfig::$ACTION_CALAVERAS:
+    case ConfigApp::$ACTION_CALAVERAS:
       $navegacionController->calaveras();
       break;
-    case RouterConfig::$ACTION_CAMISAS:
+    case ConfigApp::$ACTION_CAMISAS:
       $navegacionController->camisas();
       break;
-    case RouterConfig::$ACTION_ACCESORIOS:
+    case ConfigApp::$ACTION_ACCESORIOS:
       $navegacionController->accesorios();
       break;
-    case RouterConfig::$ACTION_BUSOS:
+    case ConfigApp::$ACTION_BUSOS:
       $navegacionController->busos();
       break;
-    case RouterConfig::$ACTION_MMA:
+    case ConfigApp::$ACTION_MMA:
       $navegacionController->mma();
       break;
-    case RouterConfig::$ACTION_INSTRUMENTOS:
+    case ConfigApp::$ACTION_INSTRUMENTOS:
       $navegacionController->instrumentos();
       break;
    }
  }
-
 
 ?>

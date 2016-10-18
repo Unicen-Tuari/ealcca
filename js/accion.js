@@ -32,6 +32,13 @@ $('document').ready(function(){   //se ejecuta cuando el DOM se a cargado comple
     cargarSeccion('somos');
   });
 
+  $('#catalogos').on('click', function(event){
+    event.preventDefault();
+    $(".nav").find(".active").removeClass("active");
+    $(this).addClass("active");
+    cargarSeccion('catalogos');
+  });
+
   $('#noticias').on('click', function(event){
     event.preventDefault();
     $(".nav").find(".active").removeClass("active");
@@ -46,74 +53,5 @@ $('document').ready(function(){   //se ejecuta cuando el DOM se a cargado comple
     cargarSeccion('contacto');
   });
 
-  $('#nacional').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('nacional');
-  });
-
-  $('#inter').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('inter');
-  });
-
-  $('#reggae').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('reggae');
-  });
-
-  $('#comics').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('comics');
-  });
-
-  $('#calaveras').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('calaveras');
-  });
-
-  $('#camisas').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('camisas');
-  });
-
-  $('#accesorios').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('accesorios');
-  });
-
-  $('#busos').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('busos');
-  });
-
-  $('#mma').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('mma');
-  });
-
-  $('#instrumentos').on('click', function(event){
-    event.preventDefault();
-    $(".nav").find(".active").removeClass("active");
-    $(this).addClass("active");
-    cargarSeccion('instrumentos');
-  });
-
+  
 });
