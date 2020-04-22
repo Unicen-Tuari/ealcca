@@ -15,3 +15,15 @@
     height: 50px;
     background-color: yellowgreen;
 }
+
+.content{
+    width: auto;
+    height: 500px;
+    background-color: green;
+}
+
+.foot{
+    width:auto;
+    height:70px;
+    background-color: orange;
+}
