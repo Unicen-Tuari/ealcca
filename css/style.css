@@ -6,7 +6,10 @@
 .banner{
     width: 100%;
     height: 130px;
-    background-color: red;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #btn-menu{
@@ -15,9 +18,10 @@
 
 #navegacion{
     width: 100%;
-    /* border: 3px solid black; */
+    border-top: 1px solid black;
+    border-bottom: 2px solid gray;
     /* border-radius: 10px; */
-    background-color: yellowgreen;
+    background-color:white;
 }
 
 #navegacion label{
@@ -34,23 +38,24 @@
 }
 
 .menu{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     list-style: none;
     display: flex;
+    justify-content: center;
 }
 
 .menu > li > a{
     display: block;
-    color: white;
-    font-family: Open sans-serif;
+    color: black;
+    font-family: 'Raleway', sans-serif;
     padding: 15px 20px;
     text-decoration: none;
 }
 
 .menu li:hover{
-    background-color: rgba(0,0,0,0.3);
-    transition: all .3s;
+    background-color: rgba(0,0,0,0.1);
+    transition: all 0.5s;
 }
 
 /*.submenu{
@@ -74,7 +79,7 @@
     /*opacity: 1;
 }*/
 
-@media (max-width:768px) {
+@media (max-width:826px) {
 
     #navegacion label{
         display: block;
@@ -98,19 +103,29 @@
     }
 
 }
+.logo{
+    width:107px;
+    /* margin: 2.7% 4%;  */
+    background-color:white;
+    
+}
 
-
+#name{
+    font-family: 'Poiret One', cursive;
+    font-size: 50px;
+    color: black;
+}
 
 
 
 .content{
     width: auto;
     height: 600px;
-    background-color: green;
+    background-color: white;
 }
 
 .foot{
     width:auto;
     height:70px;
-    background-color: orange;
+    background-color: black;
 }
