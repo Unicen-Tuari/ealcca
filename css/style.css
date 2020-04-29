@@ -138,6 +138,13 @@
     background-color: white;
 }
 
+.img-messenger{
+    position:fixed;
+    width: 60px;
+    margin-top:400px;
+    margin-left:93%;
+}
+
 /* ------------------ FOOT ------------------------*/
 
 
@@ -148,27 +155,10 @@
     display: flex;
 }
 
-.nav-foot{
+.nav-foot, .cards, .social-networks{
     width: 30%;
     margin: 10px;
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    flex-grow: 1;
-}
-
-.cards{
-    width: 30%;
-    margin: 10px;
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    flex-grow: 1;
-
-}
-
-.social-networks{
-    width: 30%;
-    margin: 10px;
-    color: white;
+    color: whitesmoke;
     font-family: 'Source Sans Pro', sans-serif;
     flex-grow: 1;
 }
@@ -183,7 +173,13 @@
     color: white;
 }
 
-.card{
+.img-cards{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card, .social{
     width:40px;
     height: 40px;
     border: 2px solid white;
@@ -191,8 +187,3 @@
     margin: 10px;
 }
 
-.img-cards{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
