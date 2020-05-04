@@ -134,8 +134,30 @@
 
 .content{
     width: auto;
-    height: 600px;
-    background-color: white;
+    height: 850px;
+    padding: 3px;
+    /*background-color: red;*/
+}
+
+.image{
+    /*background-color: yellow;*/   /*ya ni se ve*/
+    width: 670px;
+    height: 402px;
+    float: left;
+}
+
+
+.image-content{
+    /*background-color:blue;*/
+    width:670px;
+    height: 402px;
+    float: left;
+}
+
+.image-content p{
+    margin: 100px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
 }
 
 .img-messenger{
