@@ -19,7 +19,7 @@
     width:107px;
     /* margin: 2.7% 4%;  */
     background-color:white;
-    
+
 }
 
 #name{
@@ -121,7 +121,7 @@
         width:50%;
         margin-left:-50%;
         flex-direction: column;
-        transition: all 0.5s;       
+        transition: all 0.5s;
     }
 
     .menu li{
@@ -136,7 +136,7 @@
 
 /* ------------------ CONTENT ---------------------*/
 
-
+/*---INDEX>HTML---*/
 .content{
     width: auto;
     height: 850px;
@@ -144,39 +144,23 @@
     /*background-color: red;*/
 }
 
-.image{
-    background-color: yellow;   /*ya ni se ve*/
+.image-index{
     width: 670px;
     height: 402px;
     float: left;
 }
 
-.content .image .staff{
-    width:600px;
-    height:357px;
-}
-
-.content .image .perfil{
-    width: 500px;
-    height: 681px;
-}
-
-.description-image{
+.description-index{
     background-color:blue;
     width:670px;
     height: 402px;
     float: left;
 }
 
-.description-image p{
+.description-index p{
     margin: 100px;
     font-family: 'Open Sans', sans-serif;
     text-align: justify;
-}
-
-.description-image h5{
-    text-align: center;
-
 }
 
 .img-messenger{
@@ -185,6 +169,49 @@
     margin-top:400px;
     margin-left:93%;
 }
+
+/*---STAFF.HTML---*/
+.content-staff{
+  background-color: darkred;
+  width:auto;
+  height:1800px;
+}
+
+.image-staff{
+    background-color: yellow;
+    width: 670px;
+    height: 402px;
+    float: left;
+}
+
+.description-staff{
+    background-color:blue;
+    width:670px;
+    height: 402px;
+    float: left;
+}
+
+.content-staff > .image-staff > .staff{
+    width:600px;
+    height:357px;
+}
+
+.content-staff > .image-staff > .perfil{
+    width: 500px;
+    height: 681px;
+}
+
+.description-staff p{
+    margin: 100px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+.description-staff h5{
+    text-align: center;
+}
+
+
 
 /* ------------------ FOOT ------------------------*/
 
@@ -227,4 +254,3 @@
     border-radius: 60%;
     margin: 10px;
 }
-
