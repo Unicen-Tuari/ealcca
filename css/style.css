@@ -1,4 +1,12 @@
 /* ------------- UNIVERSAL ---------------*/
+/*-----FONTS-----*/
+
+/*--'Poiret One', cursive;    */ /*en el name*/
+/*--'Open Sans Condensed', sans-serif;*/ /*en 24/7*/
+/*--'Raleway', sans-serif;    */ /*en menu*/
+/*--'Open Sans', sans-serif;  */ /*contenido*/
+/*--'Source Sans Pro', sans-serif;    */ /*en el footer*/
+
 
 *{
     margin: 0px;
@@ -45,7 +53,6 @@
     width: 100%;
     border-top: 1px solid black;
     border-bottom: 2px solid gray;
-    /* border-radius: 10px; */
     background-color:white;
 }
 
@@ -88,27 +95,6 @@
     transition: all 0.5s;
 }
 
-/*.submenu{
-    background-color: yellow;
-    width: 250%;
-    visibility: hidden;  /* lo hice primero con esto display: none; */
-  /*  opacity: 0;
-    transition: opacity 1.5s;
-}
-
-.submenu li a{
-    display: block;
-    padding: 15px;
-    color: white;
-    font-family: Open sans-serif;
-    text-decoration: none;
-}
-
-.menu li:hover .submenu{
-    visibility: visible;   /* lo hice primero con esto display: block;*/
-    /*opacity: 1;
-}*/
-
 @media (max-width:826px) {
 
     #navegacion label{
@@ -141,7 +127,6 @@
     width: auto;
     height: 850px;
     padding: 3px;
-    /*background-color: red;*/
 }
 
 .image-index{
@@ -151,7 +136,6 @@
 }
 
 .description-index{
-    background-color:blue;
     width:670px;
     height: 402px;
     float: left;
@@ -175,19 +159,20 @@
   background-color: darkred;
   width:auto;
   height:1800px;
+  padding: 3px 75px;
 }
 
 .image-staff{
     background-color: yellow;
-    width: 670px;
-    height: 402px;
+    width:600px;
+    height:357px;
     float: left;
 }
 
 .description-staff{
     background-color:blue;
-    width:670px;
-    height: 402px;
+    width:600px;
+    height:357px;
     float: left;
 }
 
@@ -197,18 +182,24 @@
 }
 
 .content-staff > .image-staff > .perfil{
-    width: 500px;
-    height: 681px;
+    width: 600px;
+    height: 781px;
 }
 
 .description-staff p{
-    margin: 100px;
     font-family: 'Open Sans', sans-serif;
-    text-align: justify;
+    text-align: center;
+    background-color: aqua;
+    padding: 6px 70px;
 }
 
-.description-staff h5{
+.description-staff h2{
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
     text-align: center;
+    background-color: darkkhaki;
+    margin-top: 20%;
+    width: auto;
 }
 
 
