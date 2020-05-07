@@ -28,6 +28,11 @@
     color: black;
 }
 
+#name a{
+    text-decoration: none;
+    color: black;
+}
+
 #name2{
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
@@ -140,24 +145,38 @@
 }
 
 .image{
-    /*background-color: yellow;*/   /*ya ni se ve*/
+    background-color: yellow;   /*ya ni se ve*/
     width: 670px;
     height: 402px;
     float: left;
 }
 
+.content .image .staff{
+    width:600px;
+    height:357px;
+}
 
-.image-content{
-    /*background-color:blue;*/
+.content .image .perfil{
+    width: 500px;
+    height: 681px;
+}
+
+.description-image{
+    background-color:blue;
     width:670px;
     height: 402px;
     float: left;
 }
 
-.image-content p{
+.description-image p{
     margin: 100px;
     font-family: 'Open Sans', sans-serif;
     text-align: justify;
+}
+
+.description-image h5{
+    text-align: center;
+
 }
 
 .img-messenger{
