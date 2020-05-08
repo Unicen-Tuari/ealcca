@@ -156,21 +156,21 @@
 
 /*---STAFF.HTML---*/
 .content-staff{
-  background-color: darkred;
+  /*background-color: darkred;*/
   width:auto;
-  height:1800px;
+  height:2650px;
   padding: 3px 75px;
 }
 
 .image-staff{
-    background-color: yellow;
+    /*background-color: yellow;*/
     width:600px;
     height:357px;
     float: left;
 }
 
 .description-staff{
-    background-color:blue;
+    /*\background-color:blue;*/
     width:600px;
     height:357px;
     float: left;
@@ -186,21 +186,53 @@
     height: 781px;
 }
 
-.description-staff p{
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    background-color: aqua;
-    padding: 6px 70px;
-}
-
 .description-staff h2{
     font-family: 'Raleway', sans-serif;
     font-style: italic;
     text-align: center;
-    background-color: darkkhaki;
+    /*background-color: darkkhaki;*/
     margin-top: 20%;
     width: auto;
 }
+
+.description-staff p{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    /*background-color: aqua;*/
+    padding: 6px 70px;
+}
+
+.description-staff-perfil{
+    /*background-color:blue;*/
+    width:600px;
+    height:781px;
+    float: left;
+}
+
+.description-staff-perfil h2{
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    text-align: center;
+    /*background-color: darkkhaki;*/
+    margin-top: 45%;
+    width: auto;
+}
+
+.description-staff-perfil p{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    /*background-color: aqua;*/
+    padding: 6px 70px;
+}
+
+.description-staff-perfil ul{
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+
+}
+
 
 
 
@@ -224,7 +256,7 @@
 
 .nav-foot ul{
     list-style-type: disc;
-    padding: 10px 40px;
+    padding: 6px 40px;
 }
 
 .nav-foot li a{
