@@ -154,7 +154,7 @@
     margin-left:93%;
 }
 
-/*---STAFF.HTML---*/
+/* --- STAFF.HTML --- */
 .content-staff{
   /*background-color: darkred;*/
   width:auto;
@@ -230,11 +230,55 @@
     text-decoration: none;
     text-align: center;
     list-style: none;
-
 }
 
+/* --- EXTENSIONES.HTML ---*/
+.content-extensiones{
+    width:auto;
+    height: 700px;
+    background-color:blue; 
+    padding: 3px;
+}
 
+.image-extensiones img{
+    width: 670px;
+    height: 402px;
+    /*margin: 0px 13%;*/
+}
 
+.image-extensiones{
+    width: 670px;
+    height: 402px;
+    background-color: chartreuse;
+    float: left;
+}
+
+.description-extensiones{
+    width: 670px;
+    height: 402px;
+    background-color: red;
+    float: left;
+}
+
+.description-extensiones h2{
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    text-align: center;
+    /*background-color: darkkhaki;*/
+    margin-top: 20%;
+    width: auto;
+}
+
+.description-extensiones p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    padding-top: 8px;
+}
+.description-extensiones .a{
+  
+    padding: 0px 70px;
+    margin-top: 9%;
+}
 
 /* ------------------ FOOT ------------------------*/
 
