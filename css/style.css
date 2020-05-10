@@ -290,6 +290,31 @@
     padding-top: 15px;
 }
 
+table{
+    background-color: darkgoldenrod;
+    width: 50%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: darkgrey;
+    border-bottom: solid 5px rgb(56, 49, 49);
+}
+
+th,td{
+    padding: 15px;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover td{
+    background-color: greenyellow;
+    color: indigo;
+}
+
 /* ------------------ FOOT ------------------------*/
 
 
