@@ -235,7 +235,7 @@
 /* --- EXTENSIONES.HTML ---*/
 .content-extensiones{
     width:auto;
-    height: 1500px;
+    height: 2000px;
     /* background-color:blue;  */
     padding: 3px;
 }
@@ -290,11 +290,27 @@
     padding-top: 15px;
 }
 
+.table-extensiones{
+    width:100%;
+    height: 450px;
+    /* background-color: red; */
+    float: left;
+}
+
+.table-extensiones h2{
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    text-align: center;
+    /*background-color: darkkhaki;*/
+    margin:4%;
+    width: auto;
+}
+
 table{
-    background-color: darkgoldenrod;
-    width: 50%;
     text-align: left;
     border-collapse: collapse;
+    margin: auto;
+    width: 50%;
 }
 
 thead{
@@ -311,8 +327,8 @@ tr:nth-child(even){
 }
 
 tr:hover td{
-    background-color: greenyellow;
-    color: indigo;
+    background-color: darkgrey;
+    transition: all 1s;
 }
 
 /* ------------------ FOOT ------------------------*/
