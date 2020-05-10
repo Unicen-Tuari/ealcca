@@ -235,7 +235,7 @@
 /* --- EXTENSIONES.HTML ---*/
 .content-extensiones{
     width:auto;
-    height: 2000px;
+    height: 2200px;
     /* background-color:blue;  */
     padding: 3px;
 }
@@ -320,10 +320,12 @@ thead{
 
 th,td{
     padding: 15px;
+    font-family: 'Open Sans',sans-serif;
 }
 
 tr:nth-child(even){
     background-color: #ddd;
+    
 }
 
 tr:hover td{
@@ -331,6 +333,26 @@ tr:hover td{
     transition: all 1s;
 }
 
+.gallery{
+    width: 80%;
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing:border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: darksalmon;
+}
+
+.gallery li{
+    margin: 5px;
+}
+
+.gallery img{
+    width: 250px;
+    height: 141px;
+}
 /* ------------------ FOOT ------------------------*/
 
 
