@@ -125,7 +125,7 @@
 /*---INDEX>HTML---*/
 .content{
     width: auto;
-    height: 850px;
+    height: 1220px;
     padding: 3px;
 }
 
@@ -134,6 +134,12 @@
     height: 402px;
     float: left;
 }
+
+.image-index img{
+    width: 670px;
+    height: 402px;
+}
+
 
 .description-index{
     width:670px;
@@ -145,6 +151,18 @@
     margin: 100px;
     font-family: 'Open Sans', sans-serif;
     text-align: justify;
+}
+
+#chek{
+    width: 30px;
+    height: 30px;
+}
+
+.btn-sorteo{
+    background-color: green;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
 }
 
 .img-messenger{
