@@ -145,7 +145,6 @@
     width:670px;
     height: 402px;
     float: left;
-    background-color: blue;
 }
 
 .description-index p{
@@ -159,7 +158,7 @@
     height: 30px;
 }
 
-.description-index .btn-sorteo{
+.description-index .participar{
     background-color: green;
     font-size: 20px;
     color: white;
