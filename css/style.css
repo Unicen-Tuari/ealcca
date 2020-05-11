@@ -145,6 +145,7 @@
     width:670px;
     height: 402px;
     float: left;
+    background-color: blue;
 }
 
 .description-index p{
@@ -158,11 +159,38 @@
     height: 30px;
 }
 
-.btn-sorteo{
+.description-index .btn-sorteo{
     background-color: green;
     font-size: 20px;
     color: white;
     padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 20%;
+}
+
+#box{
+    width: 500px;
+    background-color: tomato;
+    border-radius: 8px;
+    box-shadow: 0 0 20px yellowgreen;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 6%;
+    position: absolute;
+    display: none;
+}
+
+.close{
+    font-size: 18px;
+    background-color: teal;
+    color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 6px;
 }
 
 .img-messenger{
