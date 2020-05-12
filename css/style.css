@@ -546,6 +546,15 @@ tr:hover td {
 }
 
 
+/* -------- CURSOS.HTML --------*/
+
+.content-cursos {
+    width: auto;
+    height: 1000px;
+    padding: 3px;
+}
+
+
 /* ------------------ FOOT ------------------------*/
 
 .foot {
