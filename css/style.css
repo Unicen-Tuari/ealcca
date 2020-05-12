@@ -555,6 +555,29 @@ tr:hover td {
 }
 
 
+/* -------- CONTACTO.HTML --------*/
+
+.content-contacto {
+    width: auto;
+    height: 804px;
+    padding: 3px;
+}
+
+.formulario {
+    width: 50%;
+    height: 100%;
+    background-color: blueviolet;
+    float: left;
+}
+
+.ubicacion {
+    width: 50%;
+    height: 100%;
+    background-color: greenyellow;
+    float: left;
+}
+
+
 /* ------------------ FOOT ------------------------*/
 
 .foot {
