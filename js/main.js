@@ -1,6 +1,5 @@
 "use strict";
 
-
 let btnparticipar = document.getElementById("btn-participar");
 btnparticipar.addEventListener("click", sortear);
 
