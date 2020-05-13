@@ -490,9 +490,8 @@ hr {
 /* -------- CONTACTO.HTML --------*/
 
 .content-contacto {
-    width: auto;
+    width: 100%;
     height: 700px;
-    padding: 3px;
 }
 
 .formulario {

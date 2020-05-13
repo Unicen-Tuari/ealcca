@@ -1,26 +1,44 @@
-"use strict";
+document.addEventListener('DOMContentLoaded', iniciar);
 
-let btnparticipar = document.getElementById("btn-participar");
-btnparticipar.addEventListener("click", sortear);
+function iniciar(event) {
 
-let btnclose = document.getElementById("btn-close");
-btnclose.addEventListener("click", closebox);
+    "use strict";
 
-function closebox() {
-    document.getElementById("box").style.display = "none";
-}
+    function sortear() {
 
-function sortear() {
-    let descuento = Math.floor(Math.random() * (61 - 20) + 20);
-    let descganado = document.getElementById("desc-ganado");
-    let serviganado = document.getElementById("servi-ganado");
+        let descganado = document.getElementById("desc-ganado");
+        descganado.innerHTML = porcentaje();
 
-    let servicios = ["Liftin", "Extensi&oacuten", "Servis", "Perfilado", "Make up clasico", "Make up artistico"];
-    let servicio = Math.floor(Math.random() * 6);
-    let servicioganado = servicios[servicio];
+        let serviganado = document.getElementById("servi-ganado");
+        serviganado.innerHTML = servicio();
 
-    descganado.innerHTML = descuento;
-    serviganado.innerHTML = servicioganado;
-    document.getElementById("box").style.display = "block";
+        let openbox = document.getElementById("box");
+        openbox.style.display = "block"
+
+    }
+
+    function porcentaje() {
+        let descuento = Math.floor(Math.random() * (51 - 20) + 20);
+        return descuento;
+    }
+
+    function servicio() {
+        let indice = Math.floor(Math.random() * 6);
+        let arr_servicios = ["Liftin", "Extensi&oacuten", "Servis", "Perfilado", "Make up clasico", "Make up artistico"];
+        let servicioganado = arr_servicios[indice];
+        return servicioganado;
+    }
+
+    function closebox() {
+        let close = document.getElementById("box");
+        close.style.display = "none";
+    }
+
+    let btnparticipar = document.getElementById("btn-participar");
+    btnparticipar.addEventListener("click", sortear);
+
+    let btnclose = document.getElementById("btn-close");
+    btnclose.addEventListener("click", closebox);
+
 
 }
