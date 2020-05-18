@@ -1,8 +1,7 @@
+"use strict";
 document.addEventListener('DOMContentLoaded', iniciar);
 
 function iniciar(event) {
-
-    "use strict";
 
     function sortear() {
 
