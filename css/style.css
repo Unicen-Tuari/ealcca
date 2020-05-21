@@ -533,8 +533,8 @@ textarea {
     margin: 20% auto;
 }
 
-.contacto h3,
-p {
+.contacto>h3,
+.contacto>p {
     margin-bottom: 10px;
 }
 
@@ -554,10 +554,10 @@ ion-icon {
 
 /* TODO:------------------ FOOT ------------------------*/
 
-.foot {
+footer {
     width: 100%;
-    color: gray;
     background-color: black;
+    color: gray;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
     display: flex;
@@ -568,6 +568,7 @@ ion-icon {
 .box-end {
     width: 80%;
     margin: 15px;
+    line-height: 1.5;
 }
 
 .box-end .line {
