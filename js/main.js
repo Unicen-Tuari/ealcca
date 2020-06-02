@@ -3,6 +3,24 @@ document.addEventListener('DOMContentLoaded', iniciar);
 
 function iniciar(event) {
 
+    document.addEventListener('scroll', menufixed);
+
+    let btnparticipar = document.getElementById("btn-participar");
+    btnparticipar.addEventListener("click", sortear);
+
+    let btnclose = document.getElementById("btn-close");
+    btnclose.addEventListener("click", closebox);
+
+    function menufixed() {
+        let menu = document.getElementById('nav');
+        let limite = menu.offsetTop
+        if (pageYOffset > limite) {
+            menu.classList.add('fixed');
+        } else {
+            menu.classList.remove('fixed');
+        }
+    }
+
     function sortear() {
 
         let descganado = document.getElementById("desc-ganado");
@@ -32,12 +50,6 @@ function iniciar(event) {
         let close = document.getElementById("box");
         close.style.display = "none";
     }
-
-    let btnparticipar = document.getElementById("btn-participar");
-    btnparticipar.addEventListener("click", sortear);
-
-    let btnclose = document.getElementById("btn-close");
-    btnclose.addEventListener("click", closebox);
 
 
 }

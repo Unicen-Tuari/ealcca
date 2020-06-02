@@ -20,6 +20,19 @@
 
 /* TODO: BANNER ---------------*/
 
+.jumbotron {
+    font-family: 'Poiret One', cursive;
+    background-image: url(../image/jumbotron.jpg);
+    background-size: cover;
+    color: black;
+    text-shadow: black 0.3em 0.3em 0.3em;
+    height: 600px;
+}
+
+.fixed {
+    position: fixed;
+}
+
 header {
     width: 100%;
     background-color: white;
@@ -65,7 +78,7 @@ header {
 nav {
     width: 100%;
     border-top: 1px solid gray;
-    border-bottom: 3px solid gray;
+    border-bottom: 1px solid gray;
     background-color: white;
 }
 
