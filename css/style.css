@@ -20,35 +20,10 @@
 
 /* TODO: BANNER ---------------*/
 
-.jumbotron {
-    height: 550px;
-    font-family: 'Poiret One', cursive;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    background: url(../image/jumbotron.png)top center fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: black;
-    text-shadow: black 0.3em 0.3em 0.3em;
-}
-
 
 /* .fixed {    --- invocaba el stylo desde JS para el menu fixed
     position: fixed;
 } */
-
-#name2 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 20px;
-}
-
-.container-fluid,
-.row,
-.col,
-{
-    padding: 0px;
-}
 
 header {
     width: 100%;
@@ -60,9 +35,8 @@ header {
 }
 
 .logo {
-    width: 107px;
-    margin: 20px;
     text-align: center;
+    padding: 20px;
 }
 
 #name {
@@ -72,11 +46,14 @@ header {
 
 #name2 {
     font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 19px;
+    text-shadow: black 0.1em 0.1em 0.1em;
 }
 
 #name a {
     text-decoration: none;
     color: black;
+    text-shadow: black 0.1em 0.1em 0.1em;
 }
 
 #name a:hover {
@@ -99,45 +76,19 @@ nav {
     background-color: white;
 }
 
-#btn-menu {
-    display: none;
-}
-
-nav label {
-    display: none;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    background-color: black;
-}
-
-nav label:hover {
-    cursor: pointer;
-    background-color: crimson;
-}
-
-.menu {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.menu li a {
+nav li a {
     display: block;
     color: black;
     font-family: 'Raleway', sans-serif;
-    padding: 15px 20px;
-    text-decoration: none;
 }
 
-.menu li:hover {
+nav li:hover {
     background-color: rgba(0, 0, 0, 0.2);
-    transition: all 0.5s;
+    transition: all 0.8s;
 }
 
-@media (max-width:826px) {
+
+/* @media (max-width:826px) {
     nav label {
         display: block;
     }
@@ -155,7 +106,7 @@ nav label:hover {
     #btn-menu:checked~.menu {
         margin: 0;
     }
-}
+} */
 
 
 /* TODO:------------------ CONTAINERS ---------------------*/
@@ -163,13 +114,11 @@ nav label:hover {
 .container-image {
     width: 100%;
     height: 402px;
-    float: left;
 }
 
 .container-data {
     width: 100%;
     height: 402px;
-    float: left;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,15 +146,13 @@ nav label:hover {
 }
 
 .container-big-image {
-    width: 50%;
+    width: 100%;
     height: 781px;
-    float: left;
 }
 
 .container-big-data {
-    width: 50%;
+    width: 100%;
     height: 781px;
-    float: left;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -246,11 +193,17 @@ nav label:hover {
 
 /*TODO:--------INDEX>HTML--------*/
 
-.content-index {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
+.jumbotron {
+    height: 550px;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background: url(../image/jumbotron.png)top center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    text-shadow: black 0.3em 0.3em 0.3em;
 }
 
 #testimonial {
@@ -272,7 +225,8 @@ nav label:hover {
 }
 
 #box {
-    width: 500px;
+    width: 90%;
+    padding: 0px 15px 0px 15px;
     font-family: 'Open Sans', sans-serif;
     background-color: #ffd1cc;
     border-radius: 8px;
@@ -304,9 +258,12 @@ nav label:hover {
 
 /* TODO:-------- STAFF.HTML -------- */
 
-.content-staff {
-    width: 100%;
-}
+
+/* .fixed {
+    fixed-top
+    position: fixed;
+    top: 0;
+} */
 
 
 /* TODO:-------- EXTENSIONES.HTML --------*/

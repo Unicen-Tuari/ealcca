@@ -15,9 +15,9 @@ function iniciar(event) {
         let menu = document.getElementById('nav');
         let limite = menu.offsetTop
         if (pageYOffset > limite) {
-            menu.classList.add('fixed');
+            menu.classList.add('fixed-top');
         } else {
-            menu.classList.remove('fixed');
+            menu.classList.remove('fixed-top');
         }
     }
 
