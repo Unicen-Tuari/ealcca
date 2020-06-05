@@ -454,19 +454,12 @@ hr {
 
 /* TODO:-------- CONTACTO.HTML --------*/
 
-.content-contacto {
+.formulario {
     width: 100%;
 }
 
-.formulario {
-    width: 50%;
-    float: left;
-}
-
 .ubicacion {
-    width: 50%;
-    height: 200%;
-    float: left;
+    width: 100%;
 }
 
 form {
