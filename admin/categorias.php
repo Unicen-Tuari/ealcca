@@ -67,12 +67,12 @@
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link " href="index.php">
                                 <span data-feather="file"></span> Cursos
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link active" href="#">
                                 <span data-feather="tag"></span> Categorias
                             </a>
                         </li>
@@ -82,10 +82,10 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Cursos</h1>
+                    <h1 class="h2">Categorias</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group mr-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Nuevo curso</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Nueva categoria</button>
                         </div>
                     </div>
                 </div>
@@ -94,19 +94,22 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Titulo</th>
-                                <th>Categoria</th>
-                                <th>Descripcion</th>
+                                <th>Category</th>
                                 <th>Publicada</th>
                                 <th>Accion</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <?php
+                                $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
+                                $sentence = $db->prepare( "select * from category");
+                                $sentence->execute();
+                                while($row = $sentence->fetch(PDO::FETCH_ASSOC))
+                                {
+                            ?>
                             <tr>
-                                <td>1,001</td>
-                                <td>Lorem</td>
-                                <td>ipsum</td>
-                                <td>dolor</td>
+                                <td><?php echo $row['id_category'] ?></td>
+                                <td><?php echo $row['name'] ?></td>
                                 <td><span data-feather="slash"></span></td>
                                 <td>
                                     <a href="#"><span data-feather="edit"></span></a>
@@ -114,31 +117,11 @@
                                     <a href="#"><span data-feather="cast"></span></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>1,002</td>
-                                <td>amet</td>
-                                <td>consectetur</td>
-                                <td>adipiscing</td>
-                                <td><span data-feather="slash"></span></td>
-                                <td>
-                                    <a href="#"><span data-feather="edit"></span></a>
-                                    <a href="#"><span data-feather="trash"></span></a>
-                                    <a href="#"><span data-feather="cast"></span></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1,003</td>
-                                <td>Integer</td>
-                                <td>nec</td>
-                                <td>odio</td>
-                                <td><span data-feather="slash"></span></td>
-                                <td>
-                                    <a href="#"><span data-feather="edit"></span></a>
-                                    <a href="#"><span data-feather="trash"></span></a>
-                                    <a href="#"><span data-feather="cast"></span></a>
-                                </td>
-                            </tr>
-
+                                
+                            <?php
+                                }
+                            ?> 
+                            
                         </tbody>
                     </table>
                 </div>
