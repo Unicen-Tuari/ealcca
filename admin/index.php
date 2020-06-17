@@ -1,3 +1,7 @@
+<?php
+require_once('pdo/database.php');
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -103,17 +107,16 @@
                         </thead>
                         <tbody>
                             <?php
-                                $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
-                                $sentence = $db->prepare( "select * from course");
-                                $sentence->execute();
-                                while($row = $sentence->fetch(PDO::FETCH_ASSOC))
+                                $courses = getCourses();
+                                foreach ($courses as $course)
+                                
                                 {
                             ?>
                             <tr>
-                                <td><?php echo $row['id_course'] ?></td>
-                                <td><?php echo $row['course'] ?></td>
-                                <td><?php echo $row['description'] ?></td>
-                                <td><?php echo $row['id_category'] ?></td>
+                                <td><? echo $course['id_course'] ?></td>
+                                <td><? echo $course['course'] ?></td>
+                                <td><? echo $course['description'] ?></td>
+                                <td><? echo $course['name'] ?></td>
                                 <td><span data-feather="slash"></span></td>
                                 <td>
                                     <a href="#"><span data-feather="edit"></span></a>

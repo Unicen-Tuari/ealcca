@@ -11,6 +11,8 @@
             'makeup' => 'makeup',
             'cursos' => 'cursos',
             'contacto' => 'contacto',
+            //'admin' => 'administrar',
+            // 'categorias' => 'categorias',
         ];
     }
 ?>

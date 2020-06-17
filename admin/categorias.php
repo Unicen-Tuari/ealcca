@@ -108,8 +108,8 @@
                                 {
                             ?>
                             <tr>
-                                <td><?php echo $row['id_category'] ?></td>
-                                <td><?php echo $row['name'] ?></td>
+                                <td><? echo $row['id_category'] ?></td>
+                                <td><? echo $row['name'] ?></td>
                                 <td><span data-feather="slash"></span></td>
                                 <td>
                                     <a href="#"><span data-feather="edit"></span></a>
