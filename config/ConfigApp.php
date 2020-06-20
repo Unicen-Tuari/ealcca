@@ -11,7 +11,8 @@
             'makeup' => 'makeup',
             'cursos' => 'cursos',
             'contacto' => 'contacto',
-            //'admin' => 'administrar',
+            'admin' => 'courses',
+            'insertCourse' => 'insertCourse'
             // 'categorias' => 'categorias',
         ];
     }

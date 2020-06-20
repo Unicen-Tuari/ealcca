@@ -1,5 +1,9 @@
 <?php
+
 require_once('pdo/database.php');
+
+function courses(){
+   
 ?>
 
 <!doctype html>
@@ -65,6 +69,58 @@ require_once('pdo/database.php');
         </div>
     </div>
 
+    <!--modal agregar course-->
+    <div class="modal face" id="Modaladdcourse" tabindex="-1" role="dialog" aria-labelledby="ModaladdcourseTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModaladdcourseTitle">Agregar nuevo curso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="insertCourse" method="get">
+                    <input type="submit" value="Submit">
+                        <div class="form-group">
+                            <label for="course">Curso</label>
+                            <input type="text" class="form-control" id="course" name="course" placeholder="Titulo del curso">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea name="" class="form-control" id="description" name="description" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duracion</label>
+                            <input type="text" class="form-control" id="duration" name="duration" placeholder="duracion del curso">
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Categoria</label>
+                                          
+                            <select id="category" name="category"> 
+                                <?php 
+                                $categories = getCategory();
+                                foreach ($categories as $category)
+                                {?>
+                                    <option value="<? echo $category['name'] ?>"> <? echo $category['name'] ?> </option>
+                                <?php
+                                }
+                                ?>                                     
+                            </select>                         
+                        </div>
+                        <div class="modal-footer">
+                            <div class="form-group">                                
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button> 
+                            </div>                                    
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -89,7 +145,7 @@ require_once('pdo/database.php');
                     <h1 class="h2">Cursos</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group mr-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Nuevo curso</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#Modaladdcourse">Nuevo curso</button>
                         </div>
                     </div>
                 </div>
@@ -109,7 +165,6 @@ require_once('pdo/database.php');
                             <?php
                                 $courses = getCourses();
                                 foreach ($courses as $course)
-                                
                                 {
                             ?>
                             <tr>
@@ -135,6 +190,7 @@ require_once('pdo/database.php');
             </main>
         </div>
     </div>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
@@ -142,3 +198,17 @@ require_once('pdo/database.php');
 </body>
 
 </html>
+
+<?php
+}
+
+
+function insertCourse(){
+
+    echo "Hi";
+
+    // addCourse($_GET[$course],$_GET[$duration],$_GET[$description],$_GET[$id_category]);
+    // header("location: admin");
+    // echo "salio?";
+}
+?>
