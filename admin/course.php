@@ -24,6 +24,8 @@ function courses(){
 
     <!-- Custom styles for this template -->
     <link href="../css/dashboard.css" rel="stylesheet">
+    <base href="{BASE_URL}">
+
 </head>
 
 <body>
@@ -47,6 +49,8 @@ function courses(){
             </li>
         </ul>
     </nav>
+
+    <form action=""></form>
 
     <!--modal cerrar sesion-->
     <div class="modal face" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
@@ -120,7 +124,7 @@ function courses(){
             </div>
         </div>
     </div>
-
+    
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -139,7 +143,7 @@ function courses(){
                     </ul>
                 </div>
             </nav>
-
+                                
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Cursos</h1>
@@ -190,6 +194,8 @@ function courses(){
             </main>
         </div>
     </div>
+
+    
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
@@ -201,11 +207,9 @@ function courses(){
 
 <?php
 }
-
-
 function insertCourse(){
 
-    echo "Hi";
+    echo 'INVOLCANDO A INSERT-COURSE';
 
     // addCourse($_GET[$course],$_GET[$duration],$_GET[$description],$_GET[$id_category]);
     // header("location: admin");

@@ -16,11 +16,11 @@ function getCategory(){
     return $categories;
 }
 
-function addCourse($course,$duration,$description,$id_category){
-    $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
-    $sentence = $db->prepare( "INSERT INTO COURSE(course,duration,description,id_category) VALUE(?,?,?,?)");
-    $sentence->execute(array($course,$duration,$description,$id_category));
+// function addCourse($course,$duration,$description,$id_category){
+//     $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
+//     $sentence = $db->prepare( "INSERT INTO COURSE(course,duration,description,id_category) VALUE(?,?,?,?)");
+//     $sentence->execute(array($course,$duration,$description,$id_category));
     
-}
+// }
 
 ?>
