@@ -74,7 +74,7 @@ function courses(){
     </div>
 
     <!--modal agregar course-->
-    <div class="modal face" id="Modaladdcourse" tabindex="-1" role="dialog" aria-labelledby="ModaladdcourseTitle" aria-hidden="true">
+    <!-- <div class="modal face" id="Modaladdcourse" tabindex="-1" role="dialog" aria-labelledby="ModaladdcourseTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -123,7 +123,7 @@ function courses(){
                 
             </div>
         </div>
-    </div>
+    </div> -->
     
     <div class="container-fluid">
         <div class="row">
@@ -151,8 +151,21 @@ function courses(){
                         <div class="btn-group mr-2">
                             <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#Modaladdcourse">Nuevo curso</button>
                         </div>
-                    </div>
+                    </div>                
                 </div>
+
+
+
+                <form action="insertCourse">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" value=""><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" value=""><br><br>
+                        <input type="submit" value="FUNCTION VEN!!!">
+                </form>
+
+
+
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
