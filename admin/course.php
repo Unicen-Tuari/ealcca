@@ -156,15 +156,15 @@ function courses(){
                 </div>
 
                 <div class="table-responsive">
-                    <table class="table table-striped table-sm">
-                        <thead>
+                    <table class="table table-striped ">
+                        <thead class="thead-dark">
                             <tr>
                                 <th>#</th>
                                 <th>Course</th>
                                 <th>Description</th>
                                 <th>Category</th>                                
-                                <th>Publicada</th>
-                                <th>Accion</th>
+                                <th>Published</th>
+                                <th>Actionss</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -181,15 +181,14 @@ function courses(){
                                 <td><span data-feather="slash"></span></td>
                                 <td>
                                     <a href="#"><span data-feather="edit"></span></a>
-                                    <a href="#"><span data-feather="trash"></span></a>
+                                    <a href="deleteCourse/<? echo $course['id_course'] ?>"><span data-feather="trash"></span></a>
                                     <a href="#"><span data-feather="cast"></span></a>
                                 </td>
                             </tr>
                                 
                             <?php
                                 }
-                            ?> 
-                            
+                            ?>                             
                         </tbody>
                     </table>
                 </div>
@@ -209,12 +208,15 @@ function courses(){
 }
 
 function insertCourse(){
-
     addCourse($_GET["course"],$_GET["duration"],$_GET["description"],$_GET["id_category"]);
     header("location: admin");
     // echo "salio?";
     //print_r($_GET);
     // echo $_GET["id_category"];
-    
+}
+
+function deleteCourse($params){
+    removeCourse($params[0]);
+    header("location: ../admin");
 }
 ?>
