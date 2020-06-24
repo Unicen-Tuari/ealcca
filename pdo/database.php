@@ -10,17 +10,17 @@ function getCourses(){
 
 function getCategory(){
     $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
-    $sentence = $db->prepare( "SELECT name FROM category");
+    $sentence = $db->prepare( "SELECT * FROM category");
     $sentence->execute();
     $categories = $sentence->fetchAll();
     return $categories;
 }
 
-// function addCourse($course,$duration,$description,$id_category){
-//     $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
-//     $sentence = $db->prepare( "INSERT INTO COURSE(course,duration,description,id_category) VALUE(?,?,?,?)");
-//     $sentence->execute(array($course,$duration,$description,$id_category));
+function addCourse($course,$duration,$description,$id_category){
+    $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
+    $sentence = $db->prepare( "INSERT INTO course(course,duration,description,id_category) VALUES(?,?,?,?)");
+    $sentence->execute(array($course,$duration,$description,$id_category));
     
-// }
+}
 
 ?>

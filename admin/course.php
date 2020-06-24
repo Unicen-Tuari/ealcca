@@ -13,19 +13,19 @@ function courses(){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
+    <base href="http://localhost/ealcca/admin">
     <title>Admin Cute 24/7</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Favicons -->
     <link rel="icon" href="../image/favi-icon.png">
 
     <!-- Custom styles for this template -->
-    <link href="../css/dashboard.css" rel="stylesheet">
-    <base href="{BASE_URL}">
-
+    <link href="css/dashboard.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -41,7 +41,9 @@ function courses(){
                     Bienvenido administrador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#"><span> Perfil</span></a>
+                    <a class="dropdown-item" href="#">
+                        <span> Perfil</span>
+                    </a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCenter">
                         <span>Cerrar Sesion</span>
                     </a>
@@ -49,8 +51,6 @@ function courses(){
             </li>
         </ul>
     </nav>
-
-    <form action=""></form>
 
     <!--modal cerrar sesion-->
     <div class="modal face" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
@@ -74,7 +74,7 @@ function courses(){
     </div>
 
     <!--modal agregar course-->
-    <!-- <div class="modal face" id="Modaladdcourse" tabindex="-1" role="dialog" aria-labelledby="ModaladdcourseTitle" aria-hidden="true">
+    <div class="modal face" id="Modaladdcourse" tabindex="-1" role="dialog" aria-labelledby="ModaladdcourseTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -85,28 +85,29 @@ function courses(){
                 </div>
                 <div class="modal-body">
                     <form action="insertCourse" method="get">
-                    <input type="submit" value="Submit">
                         <div class="form-group">
                             <label for="course">Curso</label>
                             <input type="text" class="form-control" id="course" name="course" placeholder="Titulo del curso">
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea name="" class="form-control" id="description" name="description" rows="3"></textarea>
+                            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="duration">Duracion</label>
                             <input type="text" class="form-control" id="duration" name="duration" placeholder="duracion del curso">
                         </div>
                         <div class="form-group">
-                            <label for="category">Categoria</label>
+                            <label for="id_category">Categoria</label>
                                           
-                            <select id="category" name="category"> 
-                                <?php 
+                            <select id="id_category" name="id_category"> 
+                            <?php 
                                 $categories = getCategory();
                                 foreach ($categories as $category)
                                 {?>
-                                    <option value="<? echo $category['name'] ?>"> <? echo $category['name'] ?> </option>
+                                    <option value="<? echo $category['id_category'] ?>">
+                                        <? echo $category['name'] ?> 
+                                    </option>
                                 <?php
                                 }
                                 ?>                                     
@@ -119,14 +120,14 @@ function courses(){
                             </div>                                    
                         </div>
                     </form>
-                </div>
-                
+                </div>                
             </div>
         </div>
-    </div> -->
-    
+    </div>
+
     <div class="container-fluid">
         <div class="row">
+
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
@@ -153,18 +154,6 @@ function courses(){
                         </div>
                     </div>                
                 </div>
-
-
-
-                <form action="insertCourse">
-                        <label for="fname">First name:</label><br>
-                        <input type="text" id="fname" value=""><br>
-                        <label for="lname">Last name:</label><br>
-                        <input type="text" id="lname" value=""><br><br>
-                        <input type="submit" value="FUNCTION VEN!!!">
-                </form>
-
-
 
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
@@ -208,24 +197,24 @@ function courses(){
         </div>
     </div>
 
-    
-    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/dashboard.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>
 
 <?php
 }
+
 function insertCourse(){
 
-    echo 'INVOLCANDO A INSERT-COURSE';
-
-    // addCourse($_GET[$course],$_GET[$duration],$_GET[$description],$_GET[$id_category]);
-    // header("location: admin");
+    addCourse($_GET["course"],$_GET["duration"],$_GET["description"],$_GET["id_category"]);
+    header("location: admin");
     // echo "salio?";
+    //print_r($_GET);
+    // echo $_GET["id_category"];
+    
 }
 ?>
