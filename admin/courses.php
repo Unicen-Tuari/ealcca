@@ -1,3 +1,5 @@
+
+
 <?php
 
 require_once('pdo/database.php');
@@ -6,7 +8,7 @@ function courses(){
    
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -52,7 +54,7 @@ function courses(){
         </ul>
     </nav>
 
-    <!--modal cerrar sesion-->
+    <!--MODAL cerrar sesion-->
     <div class="modal face" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -73,12 +75,12 @@ function courses(){
         </div>
     </div>
 
-    <!--modal agregar course-->
+    <!--MODAL agregar course-->
     <div class="modal face" id="Modaladdcourse" tabindex="-1" role="dialog" aria-labelledby="ModaladdcourseTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="ModaladdcourseTitle">Agregar nuevo curso</h5>
+                    <h5 class="modal-title" id="ModaladdcourseTitle">NEW COURSE</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -86,7 +88,7 @@ function courses(){
                 <div class="modal-body">
                     <form action="insertCourse" method="get">
                         <div class="form-group">
-                            <label for="course">Curso</label>
+                            <label for="course">Course</label>
                             <input type="text" class="form-control" id="course" name="course" placeholder="Titulo del curso">
                         </div>
                         <div class="form-group">
@@ -94,11 +96,11 @@ function courses(){
                             <textarea class="form-control" id="description" name="description" rows="3"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="duration">Duracion</label>
+                            <label for="duration">Duration</label>
                             <input type="text" class="form-control" id="duration" name="duration" placeholder="duracion del curso">
                         </div>
                         <div class="form-group">
-                            <label for="id_category">Categoria</label>
+                            <label for="id_category">Category</label>
                                           
                             <select id="id_category" name="id_category"> 
                             <?php 
@@ -115,8 +117,8 @@ function courses(){
                         </div>
                         <div class="modal-footer">
                             <div class="form-group">                                
-                                <button type="submit" class="btn btn-primary">Agregar</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button> 
+                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> 
                             </div>                                    
                         </div>
                     </form>
@@ -125,6 +127,13 @@ function courses(){
         </div>
     </div>
 
+    <!--MODAL show course-->
+    
+
+
+
+
+  
     <div class="container-fluid">
         <div class="row">
 
@@ -133,12 +142,12 @@ function courses(){
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
-                                <span data-feather="file"></span> Cursos
+                                <span data-feather="file"></span> Course
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="categorias.php">
-                                <span data-feather="tag"></span> Categorias
+                            <a class="nav-link" href="#">
+                                <span data-feather="tag"></span> Category
                             </a>
                         </li>
                     </ul>
@@ -147,10 +156,10 @@ function courses(){
                                 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Cursos</h1>
+                    <h1 class="h2">Courses</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group mr-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#Modaladdcourse">Nuevo curso</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#Modaladdcourse">New course</button>
                         </div>
                     </div>                
                 </div>
@@ -174,8 +183,12 @@ function courses(){
                                 {
                             ?>
                             <tr>
-                                <td><? echo $course['id_course'] ?></td>
-                                <td><? echo $course['course'] ?></td>
+                                <td><? echo $course['id_course'] ?></td>              
+                                <td>
+                                    <a href="show/<? echo $course['id_course'] ?>">
+                                        <? echo $course['course'] ?>
+                                    </a>
+                                </td>
                                 <td><? echo $course['description'] ?></td>
                                 <td><? echo $course['name'] ?></td>
                                 <td><span data-feather="slash"></span></td>
@@ -218,5 +231,26 @@ function insertCourse(){
 function deleteCourse($params){
     removeCourse($params[0]);
     header("location: ../admin");
+}
+?>
+
+<?php                                            
+function showCourse($params){    
+    $infoCourse = getCourse($params[0]);
+?> 
+    <div class="modal face" id="ModalCourse" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><h4>COURSE</h4></div>
+                <div class="modal-body">                    
+                        <h1><? echo $infoCourse['course'] ?></h1>
+                        <p><? echo $infoCourse['description'] ?><p>
+                </div>
+                <div class="modal-footer">                    
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
 }
 ?>

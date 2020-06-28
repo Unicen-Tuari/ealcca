@@ -9,15 +9,19 @@ define('BASE_URL','//'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].dirna
         public static $ACTIONS = [
             '' => 'home',
             'home' => 'home',
-            'staff' => 'staff',
-            'extensiones' => 'extensiones',
+            'staff' => 'staff',            
             'makeup' => 'makeup',
             'cursos' => 'cursos',
             'contacto' => 'contacto',
-            'admin' => 'courses',
+            'admin' => 'categories',
+            'extensiones' => 'extensiones',
+            // 'categories' => 'categories',
             'insertCourse' => 'insertCourse',
-            'deleteCourse' => 'deleteCourse'
-            // 'categorias' => 'categorias',
+            'deleteCourse' => 'deleteCourse',
+            'show' => 'showCourse',
+            'insertCategory' => 'insertCategory',
+            'deleteCategory' => 'deleteCategory'
+                
         ];
     }
 ?>
