@@ -8,7 +8,7 @@ require_once 'makeup.php';
 require_once 'cursos.php';
 require_once 'contacto.php';
 require_once 'admin/courses.php';
-// require_once 'admin/categories.php';
+require_once 'admin/categories.php';
 
 
 function parceURL($url){

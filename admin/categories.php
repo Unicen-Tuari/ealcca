@@ -3,7 +3,8 @@
 
 require_once('pdo/database.php');
 
-   
+function categories(){
+
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +13,6 @@ require_once('pdo/database.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
     <base href="http://localhost/ealcca/admin">
     <title>Admin Cute 24/7</title>
 
@@ -73,12 +73,12 @@ require_once('pdo/database.php');
         </div>
     </div>
 
-    <!--MODAL agregar course-->
-    <div class="modal face" id="Modaladdcourse" tabindex="-1" role="dialog" aria-labelledby="ModaladdcourseTitle" aria-hidden="true">
+    <!--MODAL agregar category-->
+    <div class="modal face" id="Modaladdcategory" tabindex="-1" role="dialog" aria-labelledby="ModaladdcategoryTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="ModaladdcourseTitle">NEW COURSE</h5>
+                    <h5 class="modal-title" id="ModaladdcategoryTitle">NEW CATEGORY</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -86,7 +86,7 @@ require_once('pdo/database.php');
                 <div class="modal-body">
                     <form action="insertCategory" method="get">
                         <div class="form-group">
-                            <label for="course">Category</label>
+                            <label for="name">Category</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Name category">
                         </div>                
                         <div class="modal-footer">
@@ -108,13 +108,13 @@ require_once('pdo/database.php');
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                <span data-feather="file"></span> Course
+                            <a class="nav-link active" href="admin">
+                                <span data-feather="file"></span> Courses
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="tag"></span> Category
+                            <a class="nav-link" href="">
+                                <span data-feather="tag"></span> Categories
                             </a>
                         </li>
                     </ul>
@@ -123,10 +123,10 @@ require_once('pdo/database.php');
                                 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">CATEGORIES</h1>
+                    <h1 class="h2">Categories</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group mr-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#Modaladdcourse">New course</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#Modaladdcategory">New category</button>
                         </div>
                     </div>                
                 </div>
@@ -173,14 +173,17 @@ require_once('pdo/database.php');
 </html>
 
 <?php
+
+}
+
 function insertCategory(){
     addCategory($_GET["name"]);
-    // header("location: admin");
+    header("location: categories");
 }
 
 function deleteCategory($params){
     removeCategory($params[0]);
-    // header("location: ../admin");
+    header("location: ../categories");
 }
 
 

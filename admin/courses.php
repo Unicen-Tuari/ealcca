@@ -142,12 +142,12 @@ function courses(){
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
-                                <span data-feather="file"></span> Course
+                                <span data-feather="file"></span> Courses
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="tag"></span> Category
+                            <a class="nav-link" href="categories">
+                                <span data-feather="tag"></span> Categories
                             </a>
                         </li>
                     </ul>
