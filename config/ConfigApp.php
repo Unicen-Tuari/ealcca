@@ -18,7 +18,7 @@ define('BASE_URL','//'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].dirna
             'categories' => 'categories',
             'insertCourse' => 'insertCourse',
             'deleteCourse' => 'deleteCourse',
-            'show' => 'showCourse',
+            'showCourse' => 'showCourse',
             'insertCategory' => 'insertCategory',
             'deleteCategory' => 'deleteCategory'
                 
