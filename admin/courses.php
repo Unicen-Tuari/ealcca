@@ -4,7 +4,7 @@ require_once('pdo/database.php');
 require_once('libs/Smarty.class.php');
 
 function courses(){
-    $categories = getCategory();       
+    $categories = getCategories();       
     $courses = getCourses();
     $smarty = new Smarty();
     $smarty->assign('categories',$categories);
@@ -22,9 +22,6 @@ function showCourse($params){
 function insertCourse(){
     addCourse($_GET["course"],$_GET["duration"],$_GET["description"],$_GET["id_category"]);
     header("location: admin");
-    // echo "salio?";
-    //print_r($_GET);
-    // echo $_GET["id_category"];
 }
 
 function deleteCourse($params){

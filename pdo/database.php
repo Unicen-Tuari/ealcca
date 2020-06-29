@@ -8,7 +8,7 @@ function getCourses(){
     return $cuorses;
 }
 
-function getCategory(){
+function getCategories(){
     $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
     $sentence = $db->prepare( "SELECT * FROM category");
     $sentence->execute();
@@ -34,6 +34,14 @@ function getCourse($id_course){
     $sentence->execute(array($id_course));
     $course = $sentence->fetch();
     return $course;
+}
+
+function getCategory($id_category){
+    $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
+    $sentence = $db->prepare( "SELECT * FROM category WHERE id_category=?");
+    $sentence->execute(array($id_category));
+    $category = $sentence->fetch();
+    return $category;
 }
 
 function addCategory($name){
