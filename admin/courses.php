@@ -12,7 +12,7 @@ function courses(){
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <base href="http://localhost/ealcca/admin">
@@ -195,7 +195,6 @@ function courses(){
                                 <td>
                                     <a href="#"><span data-feather="edit"></span></a>
                                     <a href="deleteCourse/<? echo $course['id_course'] ?>"><span data-feather="trash"></span></a>
-                                    <a href="#"><span data-feather="cast"></span></a>
                                 </td>
                             </tr>
                                 

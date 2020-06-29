@@ -13,7 +13,7 @@ define('BASE_URL','//'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].dirna
             'makeup' => 'makeup',
             'cursos' => 'cursos',
             'contacto' => 'contacto',
-            'admin' => 'categories',
+            'admin' => 'courses',
             'extensiones' => 'extensiones',
             // 'categories' => 'categories',
             'insertCourse' => 'insertCourse',
