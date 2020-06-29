@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <base href="http://localhost/ealcca/admin">
-    <title>TPL Admin Cute 24/7</title>
+    <title>Admin Cute 24/7</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
