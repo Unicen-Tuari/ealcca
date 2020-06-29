@@ -5,6 +5,6 @@ require_once('libs/Smarty.class.php');
 
 function makeup(){
     $smarty = new Smarty();
-    $smarty->display('templates/makeup.tpl');
+    $smarty -> display('templates/makeup.tpl');
 }
 ?>

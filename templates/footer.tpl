@@ -15,7 +15,7 @@
     </div>
 </footer>
 
-<!-- <script type="text/javascript" src="js/main.js"></script> -->
+<script type="text/javascript" src="js/main.js"></script>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
 </body>
