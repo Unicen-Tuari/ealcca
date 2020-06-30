@@ -1,12 +1,6 @@
 <?php
 
 require_once 'config/ConfigApp.php';
-require_once 'index.php';
-require_once 'staff.php';
-require_once 'extensiones.php';
-require_once 'makeup.php';
-require_once 'cursos.php';
-require_once 'contacto.php';
 require_once 'model/adminModel.php';
 require_once 'view/coursesView.php';
 require_once 'controller/coursesController.php';
