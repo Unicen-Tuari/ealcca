@@ -1,5 +1,5 @@
 <?php
-
+/*
 require_once('pdo/database.php');
 require_once('libs/Smarty.class.php');
 
@@ -8,5 +8,5 @@ function cursos(){
     $smarty = new Smarty();
     $smarty->assign('courses',$courses);
     $smarty->display('templates/cursos.tpl');
-}
+}*/
 ?>
