@@ -1,5 +1,5 @@
 <?php
-
+/*
 require_once('pdo/database.php');
 require_once('libs/Smarty.class.php');
 
@@ -25,7 +25,7 @@ function insertCategory(){
 function deleteCategory($params){
     removeCategory($params[0]);
     header("location: ../categories");
-}
+}*/
 
 ?>
 

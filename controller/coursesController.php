@@ -1,7 +1,7 @@
 <?php
 
 require_once('view/coursesView.php');
-require_once('model/coursesModel.php');
+require_once('model/adminModel.php');
 
 class coursesController{
 
@@ -10,7 +10,7 @@ class coursesController{
 
     function __construct(){
         $this->view = new coursesView();
-        $this->model = new coursesModel();
+        $this->model = new adminModel();
 
     }
 

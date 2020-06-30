@@ -15,13 +15,13 @@ define('BASE_URL','//'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].dirna
             'contacto' => 'contacto',            
             'extensiones' => 'extensiones',
             'admin' => 'coursesController#courses',
-            'categories' => 'categories',
+            'categories' => 'categoriesController#categories',
             'insertCourse' => 'coursesController#insertCourse',
             'deleteCourse' => 'coursesController#deleteCourse',
             'showCourse' => 'coursesController#showCourse',
-            'showCategory' => 'showCategory',
-            'insertCategory' => 'insertCategory',
-            'deleteCategory' => 'deleteCategory'
+            'showCategory' => 'categoriesController#showCategory',
+            'insertCategory' => 'categoriesController#insertCategory',
+            'deleteCategory' => 'categoriesController#deleteCategory'
                 
         ];
     }
