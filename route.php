@@ -7,8 +7,11 @@ require_once 'extensiones.php';
 require_once 'makeup.php';
 require_once 'cursos.php';
 require_once 'contacto.php';
-require_once 'admin/courses.php';
+//require_once 'admin/courses.php';
 require_once 'admin/categories.php';
+require_once 'view/coursesView.php';
+require_once 'model/coursesModel.php';
+require_once 'controller/coursesController.php';
 
 
 function parceURL($url){
@@ -23,15 +26,18 @@ $actionName = $urlData[ConfigApp::$ACTION]; //nombre de la accion a ejecutar
         
 if (array_key_exists($actionName,ConfigApp::$ACTIONS)) {
   $params = $urlData[ConfigApp::$PARAMS];
-  $methodName = ConfigApp::$ACTIONS[$actionName];
+
+  $controllerMetodo = explode('#',ConfigApp::$ACTIONS[$actionName]); //nombre del controller
+  $controller = new $controllerMetodo[0]; //controller
+  $methodName = $controllerMetodo[1]; //metodo
 
   if (isset($params) && $params != null) {
-    echo $methodName($params);
+    echo $controller->$methodName($params);
   }else{
-    echo $methodName();
+    echo $controller->$methodName();
   }
 }else{
-  echo home();  
+  echo $controller->home();  
 }
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-
+/*
 function getCourses(){
     $db = new PDO('mysql:host=localhost;dbname=db_cute24-7;charset=utf8','root','root');
     $sentence = $db->prepare( "SELECT id_course, course, description, duration, name FROM course INNER JOIN category ON course.id_category = category.id_category;");
@@ -55,5 +55,5 @@ function removeCategory($id_category){
     $sentence = $db->prepare( "DELETE FROM category WHERE id_category=?");
     $sentence->execute(array($id_category));
 }
-
+*/
 ?>
