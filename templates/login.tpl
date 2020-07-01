@@ -26,14 +26,14 @@
                     <div class="col-12">
                         <img src="image/avatar.png" alt="avatar">
                     </div>
-                    <form class="col-12" action="">
+                    <form class="col-12" action="goIn" method="POST">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="email" name="email" />
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="password" name="password" />
+                            <input type="password" class="form-control" placeholder="password" name="password" />
                         </div>
-                        <button type="submit" class="btn btn-primary"> Ingresar</button>
+                        <button type="submit" class="btn btn-primary">Ingresar</button>
                     </form>
                     <div class="col-12">
                         <a href="checkIn">REGISTRARSE</a>

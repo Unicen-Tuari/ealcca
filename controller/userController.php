@@ -38,6 +38,12 @@ class userController{
     function goIn(){
         $email = $_POST["email"];
         $password = $_POST["password"];
+        $user = $this->model->getUser($email);
+        $hash = $user["password"];
+        if (password_verify($password, $hash))
+            header("location: admin");
+        else
+            header("location: login");
     }
 
     function logOut(){
