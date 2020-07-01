@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUTE</title>
+    <link rel="icon" href="image/favi-icon.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300i|Poiret+One|Raleway|Source+Sans+Pro:200&display=swap" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -46,6 +47,15 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto">CONTACTO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navlistCategories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          CATEGORIAS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navlistCategories">
+                            {foreach from=$categories item=$category}
+                            <a class="dropdown-item" href="{$category['name']}"> {$category['name']} </a> {/foreach}
+                        </div>
                     </li>
                 </ul>
             </div>

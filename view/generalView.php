@@ -13,24 +13,29 @@ class generalView{
         $this->smarty->display('templates/index.tpl');
     }
 
-    function staff(){
+    function staff($categories){
+        $this->smarty->assign('categories',$categories);
         $this->smarty->display('templates/staff.tpl');
     }
 
-    function extensiones(){
+    function extensiones($categories){
+        $this->smarty->assign('categories',$categories);
         $this->smarty->display('templates/extensiones.tpl');    
     }
 
-    function makeup(){
+    function makeup($categories){
+        $this->smarty->assign('categories',$categories);
         $this->smarty->display('templates/makeup.tpl');
     }
 
-    function cursos($courses){
+    function cursos($categories,$courses){
+        $this->smarty->assign('categories',$categories);
         $this->smarty->assign('courses',$courses);
         $this->smarty->display('templates/cursos.tpl');
     }
 
-    function contacto(){
+    function contacto($categories){
+        $this->smarty->assign('categories',$categories);
         $this->smarty->display('templates/contacto.tpl');      
     }
 

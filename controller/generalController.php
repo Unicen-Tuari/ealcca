@@ -18,24 +18,29 @@ class generalController{
     }
 
     function staff(){
-        $this->view->staff();
+        $categories = $this->model->getCategories();
+        $this->view->staff($categories);
     }
 
     function extensiones(){
-        $this->view->extensiones();
+        $categories = $this->model->getCategories();
+        $this->view->extensiones($categories);
     }
 
     function makeup(){
-        $this->view->makeup();
+        $categories = $this->model->getCategories();
+        $this->view->makeup($categories);
     }
 
     function cursos(){
+        $categories = $this->model->getCategories();
         $courses = $this->model->getCourses();
-        $this->view->cursos($courses);
+        $this->view->cursos($categories,$courses);
     }
 
     function contacto(){
-        $this->view->contacto();
+        $categories = $this->model->getCategories();
+        $this->view->contacto($categories);
     }
 
 }
