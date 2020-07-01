@@ -8,14 +8,9 @@
     <base href="http://localhost/ealcca/admin">
     <title>Admin Cute 24/7</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Favicons -->
-    <link rel="icon" href="../image/favi-icon.png">
-
-    <!-- Custom styles for this template -->
+    <link rel="icon" href="image/favi-icon.png">
     <link href="css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styleadmin.css">
 
