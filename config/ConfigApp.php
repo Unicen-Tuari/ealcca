@@ -25,7 +25,7 @@ define('BASE_URL','//'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].dirna
             'login' => 'userController#login',
             'checkIn' => 'userController#checkIn',
             'register' => 'userController#register',
-            'logIn' => 'userController#logIn',
+            'goIn' => 'userController#goIn',
             'logOut' => 'userController#logOut'
                 
         ];

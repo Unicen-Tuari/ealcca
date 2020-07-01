@@ -35,6 +35,9 @@
                         </div>
                         <button type="submit" class="btn btn-primary"> Ingresar</button>
                     </form>
+                    <div class="col-12">
+                        <a href="checkIn">REGISTRARSE</a>
+                    </div>
                 </div>
             </div>
             <div class="col"></div>

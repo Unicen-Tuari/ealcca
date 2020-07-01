@@ -17,7 +17,7 @@ class userController{
     }
 
     function checkIn(){
-        return $this->view->register();
+        return $this->view->checkIn();
     }
 
     function register(){
@@ -32,10 +32,10 @@ class userController{
         header("location: login");
     }
 
-    // function logIn(){
-    //     $email = $_POST["email"];
-    //     $password = $_POST["password"];
-    // }
+    function goIn(){
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+    }
 
     function logOut(){
 
