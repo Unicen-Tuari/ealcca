@@ -18,6 +18,16 @@
 }
 
 
+/* ------------ LOGIN --------------*/
+
+#recuadro-login {
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0;
+    background-color: red;
+}
+
+
 /* TODO: BANNER ---------------*/
 
 
