@@ -24,7 +24,7 @@
             <div class="col-sm-4 " id="recuadro-login">
                 <div class="model-content">
                     <div class="col-12">
-                        <img src="image/avatar.png" alt="avatar">
+                        <img src="image/newUser.png" alt="avatar">
                     </div>
                     <form class="col-12" action="register" method="POST">
                         <div class="form-group">
@@ -50,6 +50,9 @@
                         </fieldset>
                         <button type="submit" class="btn btn-primary"> Registrarse</button>
                     </form>
+                    <div class="alert alert-success" role="alert">
+                        <a href="login">Tengo cuenta</a>
+                    </div>
                 </div>
             </div>
             <div class="col"></div>
