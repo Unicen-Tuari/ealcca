@@ -56,10 +56,14 @@
                 </div>
                 <div class="modal-body">
                     Deseas cerrar tu sesion?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Cerrar Sesion</button>
+                    <form action="logOut" method="get">
+                        <div class="modal-footer">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Cerrar Sesion</button>
+                                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
