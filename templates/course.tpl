@@ -13,12 +13,14 @@
                     </div>
                 </div>
             </div>
-            <div class="alert alert-info p-5" role="alert">
-                <h4 class="alert-heading text-center">{$infoCourse['course']}</h4>
-                <hr>
-                <p>{$infoCourse['description']}</p>
-                <hr>
-                <p class="mb-0">Sorry.</p>
+
+            <div class="card text-white bg-info mb-3 infoCourse">
+                <div class="card-header">{$infoCourse['name']}</div>
+                <div class="card-body">
+                    <h4 class="card-title">{$infoCourse['course']}</h4>
+                    <p class="card-text text-white">{$infoCourse['description']}</p>
+                    <li>Duraci&oacuten del curso: {$infoCourse['duration']}</li>
+                </div>
             </div>
         </main>
     </div>

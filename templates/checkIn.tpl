@@ -2,7 +2,11 @@
 
 <body id="pageLogin">
     <div class="container model-dialog text-center">
-
+        <div class="row">
+            <div class="col mt-4">
+                <h2>Welcome</h2>
+            </div>
+        </div>
         <div class="row">
             <div class="col"></div>
             <div class="col-sm-4" id="recuadro-login">
@@ -29,7 +33,6 @@
                                         <input class="form-check-input" type="radio" name="is_admin" id="invitado" value="0" checked>
                                         <label class="form-check-label" for="invitado">Invitado</label>
                                     </div>
-
                                 </div>
                             </div>
                         </fieldset>

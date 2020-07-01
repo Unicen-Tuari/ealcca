@@ -566,6 +566,14 @@ ion-icon {
 }
 
 
+/* ------------ INFO ADMIN --------------*/
+
+.infoCourse {
+    max-width: 50%;
+    text-align: justify;
+}
+
+
 /* TODO:------------------ FOOT ------------------------*/
 
 footer {

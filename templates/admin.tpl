@@ -84,8 +84,7 @@
                             <th>Course</th>
                             <th>Description</th>
                             <th>Category</th>
-                            <th>Published</th>
-                            <th>Actionss</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -105,9 +104,8 @@
                             <td>
                                 {$course['name']}
                             </td>
-                            <td><span data-feather="slash"></span></td>
                             <td>
-                                <a href="#"><span data-feather="edit"></span></a>
+                                <!-- <a href="#"><span data-feather="edit"></span></a> -->
                                 <a href="deleteCourse/{$course['id_course']}"><span data-feather="trash"></span></a>
                             </td>
                         </tr>
