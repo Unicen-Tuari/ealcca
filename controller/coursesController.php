@@ -12,10 +12,17 @@ class coursesController{
         $this->view = new coursesView();
         $this->model = new adminModel();
         
-        session_start();
+        session_start();        
+        
         if(!isset($_SESSION["name"])){
             header("location:login");
             die();
+        }else{
+            if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)){
+                header("location:logOut");
+                die();
+            }
+            $_SESSION['LAST_ACTIVITY'] = time();
         }
     }
 
