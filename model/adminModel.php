@@ -17,7 +17,7 @@ class adminModel{
         $sentence = $this->db->prepare("SELECT * FROM user WHERE email = ?)");
         $sentence->execute(array($email));
         $user = $sentence->fetch();
-        return $user
+        return $user;
     }
 
     function getCourses(){

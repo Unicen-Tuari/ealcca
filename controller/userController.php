@@ -32,10 +32,10 @@ class userController{
         header("location: login");
     }
 
-    function logIn(){
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-    }
+    // function logIn(){
+    //     $email = $_POST["email"];
+    //     $password = $_POST["password"];
+    // }
 
     function logOut(){
 
