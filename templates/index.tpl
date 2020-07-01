@@ -24,7 +24,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contacto">CONTACTO</a>
                     </li>
-
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navlistCategories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          CATEGORIAS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navlistCategories">
+                            {foreach from=$categories item=$category}
+                            <a class="dropdown-item" href="{$category['name']}"> {$category['name']} </a> {/foreach}
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>

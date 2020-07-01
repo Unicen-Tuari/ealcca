@@ -13,8 +13,9 @@ class generalController{
         $this->model = new adminModel();
     }
 
-    function home(){           
-        $this->view->home();                                 
+    function home(){        
+        $categories = $this->model->getCategories();   
+        $this->view->home($categories);                                 
     }
 
     function staff(){

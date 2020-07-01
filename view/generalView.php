@@ -9,7 +9,8 @@ class generalView{
         $this->smarty = new Smarty;
     }
 
-    function home(){
+    function home($categories){
+        $this->smarty->assign('categories',$categories);
         $this->smarty->display('templates/index.tpl');
     }
 
