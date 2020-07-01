@@ -2,12 +2,15 @@
 
 require_once 'config/ConfigApp.php';
 require_once 'model/adminModel.php';
+require_once 'view/userView.php';
 require_once 'view/coursesView.php';
 require_once 'view/generalView.php';
 require_once 'view/categoriesView.php';
+require_once 'controller/userController.php';
 require_once 'controller/coursesController.php';
 require_once 'controller/generalController.php';
 require_once 'controller/categoriesController.php';
+
 
 function parceURL($url){
   $urlExploded = explode("/",$url);

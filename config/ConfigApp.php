@@ -21,7 +21,12 @@ define('BASE_URL','//'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].dirna
             'showCourse' => 'coursesController#showCourse',
             'showCategory' => 'categoriesController#showCategory',
             'insertCategory' => 'categoriesController#insertCategory',
-            'deleteCategory' => 'categoriesController#deleteCategory'
+            'deleteCategory' => 'categoriesController#deleteCategory',
+            'login' => 'userController#login',
+            'checkIn' => 'userController#checkIn',
+            'register' => 'userController#register',
+            'logIn' => 'userController#logIn',
+            'logOut' => 'userController#logOut'
                 
         ];
     }
