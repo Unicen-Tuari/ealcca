@@ -12,31 +12,31 @@
 
 </head>
 
-<body>
+<body id="pageLogin">
     <div class="container model-dialog text-center">
         <div class="row">
-            <div class="col">
+            <div class="col mt-4">
                 <h1>Hi!</h1>
             </div>
         </div>
         <div class="row">
             <div class="col"></div>
-            <div class="col-sm-4 " id="recuadro-login">
-                <div class="model-content">
-                    <div class="col-12">
+            <div class="col-sm-4" id="recuadro-login">
+                <div class="model-content boxLogin">
+                    <div class="col-12 imglogin">
                         <img src="image/avatar.png" alt="avatar">
                     </div>
-                    <form class="col-12" action="goIn" method="POST">
+                    <form class="col-12 m-0 form-login" action="goIn" method="POST">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="email" name="email" />
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="password" name="password" />
                         </div>
-                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                        <button type="submit" class="btn btn-primary mt-2 mb-2">Ingresar</button>
                     </form>
                     <div class="col-12">
-                        <a href="checkIn">REGISTRARSE</a>
+                        <a href="checkIn" class="registrarte">Registrarte</a>
                     </div>
                 </div>
             </div>
