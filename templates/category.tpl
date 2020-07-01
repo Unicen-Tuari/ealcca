@@ -13,9 +13,12 @@
                     </div>
                 </div>
             </div>
-            <div class="table-responsive">
-                <h1>{$infoCategory['name']}</h1>
-
+            <div class="card text-white bg-info mb-3 infoCourse">
+                <div class="card-header">{$infoCategory['id_category']}</div>
+                <div class="card-body">
+                    <h4 class="card-title">{$infoCategory['name']}</h4>
+                    <p class="card-text text-white"></p>
+                </div>
             </div>
         </main>
     </div>

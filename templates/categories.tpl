@@ -63,7 +63,6 @@
                                 </a>
                             </td>
                             <td>
-                                <a href="#"><span data-feather="edit"></span></a>
                                 <a href="deleteCategory/{$category['id_category']}"><span data-feather="trash"></span></a>
                             </td>
                         </tr>
