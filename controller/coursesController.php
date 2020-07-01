@@ -15,10 +15,9 @@ class coursesController{
     }
 
     function courses(){
-        //$categories = $this->model->getCategories();
-        //$this->view->courses($categories);    
+        $categories = $this->model->getCategories();    
         $courses = $this->model->getCourses();
-        $this->view->courses($courses);
+        $this->view->courses($categories,$courses);
     }
 
     function showCourse($params){    

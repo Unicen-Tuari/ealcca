@@ -13,9 +13,12 @@
                     </div>
                 </div>
             </div>
-            <div class="table-responsive">
-                <h1>{$infoCourse['course']}</h1>
+            <div class="alert alert-info p-5" role="alert">
+                <h4 class="alert-heading text-center">{$infoCourse['course']}</h4>
+                <hr>
                 <p>{$infoCourse['description']}</p>
+                <hr>
+                <p class="mb-0">Sorry.</p>
             </div>
         </main>
     </div>

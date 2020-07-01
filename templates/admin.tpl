@@ -25,14 +25,11 @@
                     </div>
                     <div class="form-group">
                         <label for="id_category">Category</label>
-
-                        <select id="id_category" name="id_category"> 
-                                {foreach from=$categories item=$category}
-                                    <option value="{$category['id_category']}">
-                                        {$category['name']} 
-                                    </option>
-                                {/foreach}                                   
-                            </select>
+                        <select class="form-control" id="id_category" name="id_category"> 
+                            {foreach from=$categories item=$category}
+                                <option value="{$category['id_category']}">{$category['name']}</option>
+                            {/foreach}                                   
+                        </select>
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
@@ -47,7 +44,21 @@
 </div>
 
 <!--MODAL show course-->
+<div class="modal face" id="Modalinfocourse" tabindex="-1" role="dialog" aria-labelledby="ModalinfocourseTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalinfocourseTitle">COURSE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
 
+            </div>
+        </div>
+    </div>
+</div>
 <!---->
 
 <div class="container-fluid">
@@ -86,7 +97,7 @@
                             <td>
                                 <a href="showCourse/{$course['id_course']}">
                                                 {$course['course']}
-                                            </a>
+                                </a>
                             </td>
                             <td>
                                 {$course['description']}

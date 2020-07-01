@@ -9,8 +9,8 @@ class coursesView{
         $this->smarty = new Smarty;
     }
 
-    function courses($courses){
-        //$this->smarty->assign('categories',$categories);
+    function courses($categories,$courses){
+        $this->smarty->assign('categories',$categories);
         $this->smarty->assign('courses',$courses);
         $this->smarty->display('templates/admin.tpl');
     }
