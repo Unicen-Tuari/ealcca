@@ -28,7 +28,10 @@ class userController{
         if($_POST["password"]==""){
             return;
         }
-        $this->model->newUser($_POST["email"],$_POST["password"]);
+        if($_POST["is_admin"]==""){
+            return;
+        }
+        $this->model->newUser($_POST["email"],$_POST["password"],$_POST["is_admin"]);
         header("location: login");
     }
 
