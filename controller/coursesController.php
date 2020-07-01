@@ -11,7 +11,12 @@ class coursesController{
     function __construct(){
         $this->view = new coursesView();
         $this->model = new adminModel();
-
+        
+        session_start();
+        if(!isset($_SESSION["name"])){
+            header("location:login");
+            die();
+        }
     }
 
     function courses(){

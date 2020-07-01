@@ -40,8 +40,11 @@ class userController{
         $password = $_POST["password"];
         $user = $this->model->getUser($email);
         $hash = $user["password"];
-        if (password_verify($password, $hash))
+        if (password_verify($password, $hash)){
+            session_start();
+            $_SESSION["name"] = $user["email"];
             header("location: admin");
+        }            
         else
             header("location: login");
     }
