@@ -1,6 +1,6 @@
 <?php
 require_once('view/userView.php');
-require_once('model/adminModel.php');
+require_once('model/userModel.php');
 
 class userController{
     
@@ -9,7 +9,7 @@ class userController{
 
     function __construct(){
         $this->view = new userView();
-        $this->model = new adminModel();
+        $this->model = new userModel();
     }
 
     function login(){
