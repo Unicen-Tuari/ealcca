@@ -18,20 +18,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="makeup">MAKE UP</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cursos">CURSOS</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navlistCategories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          CURSOS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navlistCategories">
+                            <a class="dropdown-item" href="allCourses">Todos</a> {foreach from=$categories item=$category}
+                            <a class="dropdown-item" href="cursos/{$category['id_category']}"> {$category['name']} </a> {/foreach}
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto">CONTACTO</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navlistCategories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          CATEGORIAS
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navlistCategories">
-                            {foreach from=$categories item=$category}
-                            <a class="dropdown-item" href="{$category['name']}"> {$category['name']} </a> {/foreach}
-                        </div>
                     </li>
                 </ul>
             </div>

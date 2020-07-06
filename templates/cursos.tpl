@@ -4,7 +4,6 @@
     <section>
         <div class="container-fluid">
             <div class="row">
-
                 <div class="col-lg-6 p-0">
                     <div class="container-image">
                         <img src="image/curso1.jpg" alt="cursos">
@@ -52,8 +51,6 @@
             </div>
         </div>
     </section>
-
     {/if} {/foreach}
 </article>
-
 {include file="footer.tpl"}

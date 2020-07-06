@@ -33,9 +33,15 @@ class mainController{
         $this->view->makeup($categories);
     }
 
-    function cursos(){
+    function allCourses(){
         $categories = $this->model->getCategoriesForNav();
-        $courses = $this->model->getCoursesForPage();
+        $courses = $this->model->getCoursesAll();
+        $this->view->allCourses($categories,$courses);
+    }
+
+    function cursos($params){
+        $categories = $this->model->getCategoriesForNav();
+        $courses = $this->model->getCoursesByCategory($params[0]);
         $this->view->cursos($categories,$courses);
     }
 

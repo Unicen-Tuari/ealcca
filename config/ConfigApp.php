@@ -26,8 +26,8 @@ define('BASE_URL','//'.$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].dirna
             'checkIn' => 'userController#checkIn',
             'register' => 'userController#register',
             'goIn' => 'userController#goIn',
-            'logOut' => 'userController#logOut'
-                
+            'logOut' => 'userController#logOut',
+            'allCourses' => 'mainController#allCourses'                
         ];
     }
 ?>

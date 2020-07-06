@@ -35,6 +35,12 @@ class mainView{
         $this->smarty->display('templates/cursos.tpl');
     }
 
+    function allCourses($categories,$courses){
+        $this->smarty->assign('categories',$categories);
+        $this->smarty->assign('courses',$courses);
+        $this->smarty->display('templates/allCourses.tpl');
+    }
+
     function contacto($categories){
         $this->smarty->assign('categories',$categories);
         $this->smarty->display('templates/contacto.tpl');      
