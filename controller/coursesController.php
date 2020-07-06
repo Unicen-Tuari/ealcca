@@ -27,7 +27,7 @@ class coursesController{
     }
 
     function courses(){
-        $categories = $this->model->getCategories();    
+        $categories = $this->model->getCategoriesForAddCourse();    
         $courses = $this->model->getCourses();
         $this->view->courses($categories,$courses);
     }

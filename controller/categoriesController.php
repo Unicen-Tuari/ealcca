@@ -1,7 +1,7 @@
 <?php
 
 require_once('view/categoriesView.php');
-require_once('model/adminModel.php');
+require_once('model/categoriesModel.php');
 
 class categoriesController{
 
@@ -10,7 +10,7 @@ class categoriesController{
 
     function __construct(){
         $this->view = new categoriesView();
-        $this->model = new adminModel();
+        $this->model = new categoriesModel();
 
         session_start();        
         
