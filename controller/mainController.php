@@ -41,8 +41,9 @@ class mainController{
 
     function cursos($params){
         $categories = $this->model->getCategoriesForNav();
+        $category = $this->model->getCategoryForTitle($params[0]);
         $courses = $this->model->getCoursesByCategory($params[0]);
-        $this->view->cursos($categories,$courses);
+        $this->view->cursos($categories,$courses,$category);
     }
 
     function contacto(){

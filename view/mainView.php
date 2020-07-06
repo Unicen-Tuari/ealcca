@@ -29,7 +29,8 @@ class mainView{
         $this->smarty->display('templates/makeup.tpl');
     }
 
-    function cursos($categories,$courses){
+    function cursos($categories,$courses,$category){
+        $this->smarty->assign('category',$category);
         $this->smarty->assign('categories',$categories);
         $this->smarty->assign('courses',$courses);
         $this->smarty->display('templates/cursos.tpl');

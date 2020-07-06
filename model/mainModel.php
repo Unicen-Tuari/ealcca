@@ -29,7 +29,12 @@ class mainModel{
         return $cuorses;
     }
 
-
+    function getCategoryForTitle($id_category){
+        $sentence = $this->db->prepare( "SELECT * FROM category WHERE id_category=?");
+        $sentence->execute(array($id_category));
+        $category = $sentence->fetch();
+        return $category;
+    }
 }
 
 ?>
