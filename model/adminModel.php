@@ -46,7 +46,6 @@ class adminModel{
     
     function getCourse($id_course){
         $sentence = $this->db->prepare( "SELECT id_course, course, description, duration, name FROM course INNER JOIN category ON course.id_category = category.id_category WHERE id_course=?");
-
         // $sentence = $this->db->prepare( "SELECT * FROM course WHERE id_course=?");
         $sentence->execute(array($id_course));
         $course = $sentence->fetch();

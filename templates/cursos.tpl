@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 <article>
-    {foreach from=$courses item=$course}
+    {foreach from=$courses key=$id item=$course} {if $id % 2 == 0}
     <section>
         <div class="container-fluid">
             <div class="row">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>{else}
     <section>
         <div class="container-fluid">
             <div class="row">
@@ -38,9 +38,9 @@
                             {$course['description']}
                         </p>
                         <ul>
-                            <li>Nivel inicial y avanzado</li>
-                            <li>D&iacutea y horario a coordinar con alumnas</li>
-                            <li>Duraci&oacuten 24hrs</li>
+                            <li>D&iacutea y horario: A coordinar con alumnas</li>
+                            <li>Duraci&oacuten: {$course['duration']}</li>
+                            <li>Especialidad: {$course['name']}</li>
                         </ul>
                     </div>
                 </div>
@@ -52,7 +52,8 @@
             </div>
         </div>
     </section>
-    {/foreach}
+
+    {/if} {/foreach}
 </article>
 
 {include file="footer.tpl"}
