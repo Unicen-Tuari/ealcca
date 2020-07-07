@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <base href="http://localhost/ealcca/admin">
+    <!-- <base href="http://localhost/ealcca/admin"> -->
+    <base href=".$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).">
     <title>Admin Cute 24/7</title>
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
