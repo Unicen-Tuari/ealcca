@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 07-07-2020 a las 15:02:54
+-- Tiempo de generación: 07-07-2020 a las 16:32:15
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -89,10 +89,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `email`, `password`, `is_admin`) VALUES
 (3, 'a@a.com', '$2y$10$AsQQcMNQ.fYhRb1cRRQIKOMldal1u4TRbvDAgaJ.hGh.2/9r0HD6G', 0),
 (4, 'admin@admin.com', '$2y$10$IQ3/N0jibggrFSVWHIWVBu9LxPfpPvEgBGhf8MIwTH8TEzvYfy8jS', 1),
-(5, 'test@test.com', '$2y$10$Y22sV1zdpiHDhLTp78PDJ.Vj1kXGJbUYlxfNaznEIC9MQNgsAwAMC', 1),
-(6, 'admin', '$2y$10$Tbyogxq8cDIZ.pFmDKfEk.ONNh801ed/DdgIrkpEjOs5w43xntsa6', 0),
-(7, 'a', '$2y$10$UikfA2y/bJGVD3Wczf1sl.u7t5hN4dkstJHkGG76eaUdsVEM4tmee', 0),
-(11, 'belen', '$2y$10$dy8YRTwWorIxL39.hYNbl.n1ZoUXqGV/YnPYwQlZH8TbHswqJlVcu', 1);
+(12, 'test@test.com', '$2y$10$QYhGlT/o5jgA.Am9UQGfvuYkAjVqzlyNkpzsTQqtTUU.p6j/fQ5ma', 1);
 
 --
 -- Índices para tablas volcadas
@@ -137,7 +134,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
