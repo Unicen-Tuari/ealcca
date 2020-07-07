@@ -16,7 +16,7 @@
                     </div>
                     <form class="col-12 m-0 form-login" action="goIn" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="email" name="email" required/>
+                            <input id="inputPass" type="text" class="form-control" placeholder="email" name="email" required/>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="password" name="password" required/>
