@@ -16,10 +16,10 @@
                     </div>
                     <form class="col-12 m-2" action="register" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="email" name="email" />
+                            <input type="text" class="form-control" placeholder="email" name="email" required/>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="password" name="password" />
+                            <input type="password" class="form-control" placeholder="password" name="password" required/>
                         </div>
                         <fieldset class="form-group">
                             <div class="row">

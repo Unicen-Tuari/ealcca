@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 01-07-2020 a las 10:35:39
+-- Tiempo de generación: 07-07-2020 a las 15:02:54
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -65,8 +65,9 @@ CREATE TABLE `course` (
 INSERT INTO `course` (`id_course`, `course`, `duration`, `description`, `id_category`) VALUES
 (1, 'Auto maquillaje', '24 hrs', 'Te ofrecemos una clase pensada para las aficionadas y amantes del maquillaje que quieran aprender correctamente a realizar sus propios looks e incorporar técnicas profesionales sin ser expertas en el tema.', 1),
 (2, 'Extensión de pestañas', '20 hrs', 'Aplicación paso a paso de las extensiones de pestañas, preparación previa, selección adecuada de pestañas y correcta combinación.', 2),
-(3, 'Taller de lifting y mascara semipermanente', '15 hrs', 'Es una técnica innovadora que riza las pestañas desde la raíz para dar un efecto de mayor longitud, obteniendo unas extensiones 100% naturales sin necesidades de pegamentos o productos adicionales. Horarios a charlar con la especialista. ', 3),
-(4, 'Taller de diseño y perfilado de cejas', '4 hrs', 'Aprenderás a depilar con pinza y perfilar las cejas. Un perfilado correcto y acorde a cada tipo de rostro ayuda a abrir el área de los ojos, dándole un aspecto joven. Horarios a charlar con la especialista.', 6);
+(3, 'Taller de mascara semipermanente', '15 hrs', 'Es una técnica innovadora que riza las pestañas desde la raíz para dar un efecto de mayor longitud, obteniendo unas extensiones 100% naturales sin necesidades de pegamentos o productos adicionales. Horarios a charlar con la especialista. ', 3),
+(4, 'Taller de perfilado de cejas', '4 hrs', 'Aprenderás a depilar con pinza y perfilar las cejas. Un perfilado correcto y acorde a cada tipo de rostro ayuda a abrir el área de los ojos, dándole un aspecto joven. Horarios a charlar con la especialista.', 6),
+(25, 'Cuidados y alergias', '15 hrs', 'Taller especializado en todo el margen teorico, en cuanto a los cuidados y las alergias que se pueden producir con el uso de los productos para las instalaciones de pestañas.', 2);
 
 -- --------------------------------------------------------
 
@@ -86,13 +87,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `email`, `password`, `is_admin`) VALUES
-(1, 'edual986@gmail.com', 'admin123', 1),
-(2, 'belen@gmail.com', 'admin123', 0),
 (3, 'a@a.com', '$2y$10$AsQQcMNQ.fYhRb1cRRQIKOMldal1u4TRbvDAgaJ.hGh.2/9r0HD6G', 0),
 (4, 'admin@admin.com', '$2y$10$IQ3/N0jibggrFSVWHIWVBu9LxPfpPvEgBGhf8MIwTH8TEzvYfy8jS', 1),
 (5, 'test@test.com', '$2y$10$Y22sV1zdpiHDhLTp78PDJ.Vj1kXGJbUYlxfNaznEIC9MQNgsAwAMC', 1),
 (6, 'admin', '$2y$10$Tbyogxq8cDIZ.pFmDKfEk.ONNh801ed/DdgIrkpEjOs5w43xntsa6', 0),
-(7, 'a', '$2y$10$UikfA2y/bJGVD3Wczf1sl.u7t5hN4dkstJHkGG76eaUdsVEM4tmee', 0);
+(7, 'a', '$2y$10$UikfA2y/bJGVD3Wczf1sl.u7t5hN4dkstJHkGG76eaUdsVEM4tmee', 0),
+(11, 'belen', '$2y$10$dy8YRTwWorIxL39.hYNbl.n1ZoUXqGV/YnPYwQlZH8TbHswqJlVcu', 1);
 
 --
 -- Índices para tablas volcadas
@@ -125,19 +125,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `course`
 --
 ALTER TABLE `course`
-  MODIFY `id_course` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_course` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
